@@ -41,5 +41,14 @@
 }
 .header__nav-list {
   list-style: none;
-  display: inline;
+  display: flex;
+  flex-direction: row;
+}
+.header__nav-list--nav-bio {
+  flex: 1;
+  text-align: center;
+}
+.header__nav-list--nav-shows {
+  flex: 1;
+  text-align: center;
 }/*# sourceMappingURL=bio.css.map */

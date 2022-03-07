@@ -27,13 +27,17 @@
     
     &__nav-list {
         list-style: none;
-        display: inline;
+        display: flex;
+        flex-direction: row;
+        
         
         &--nav-bio{
-            
+            flex: 1;
+            text-align: center;
         }
         &--nav-shows{
-            
+            flex: 1;
+            text-align: center;
         }
     
     }
