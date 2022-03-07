@@ -1,12 +1,42 @@
 @use './partials/fonts' as *;
+@use './partials/variables' as *;
+
 
 * {
     font-family: 'AvenirNext LT Pro', serif;
 }
 
-header {
-    background-color: ;
+// header section
+.header {
+    background-color: $blackBg;
+    color: $whiteTextClr;
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
 
-    &
+    &__site-logo {
+    text-transform: uppercase;
+    width: 100%;
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    }
+    
+    &__nav-list {
+        list-style: none;
+        display: inline;
+        
+        &--nav-bio{
+            
+        }
+        &--nav-shows{
+            
+        }
+    
+    }
+
+    
 }
