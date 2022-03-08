@@ -1,0 +1,98 @@
+@use './partials/fonts' as *;
+@use './partials/variables' as *;
+@use './partials/mediaQueries' as *;
+
+* {
+    font-family: 'AvenirNext LT Pro', serif;
+    margin: 0;
+}
+
+// header section
+.header {
+    background-color: $blackBg;
+    color: $whiteTextClr;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    
+    
+
+    &__site-logo {
+    text-transform: uppercase;
+    width: auto;
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    padding: 1% 3% 2%;
+    }
+    
+    &__nav-list {
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        padding: 0 2% 4%;
+        
+        
+        &--nav-bio{
+            flex: 1;
+            text-align: center;
+        }
+        &--nav-shows{
+            flex: 1;
+            text-align: center;
+        }
+
+        &--link {
+            text-decoration: none;
+        }
+        &--link:active {
+            border-bottom: 3px solid $whiteTextClr;
+            padding: 0 35% 8%;   
+        }
+        &--link:hover {
+            border-bottom: 3px solid $offWhiteClr;
+            padding: 0 35% 8%;
+        }
+        // &--link:inactive {
+        //     border-bottom: 3px solid $offWhiteClr;
+        //     padding: 0 35% 8%;
+        //     color: $silverClr;
+        // }
+
+        // &--nav-bio:active{
+        //     border-bottom: 3px solid $offWhiteClr;
+        // }
+        // &--nav-shows:active{
+        //     border-bottom: 3px solid $offWhiteClr;
+        // }
+    
+    }
+
+    @include tablet {
+        display: inline;
+        flex-wrap: wrap;
+        width: auto;
+        
+        &__site-logo {
+            justify-content: flex-start;
+            }
+            
+            &__nav-list {
+                display: inline-block;
+            flex-wrap: wrap;
+            width: 100%;
+                
+                
+                &--nav-bio{
+                    width: auto;
+                }
+                &--nav-shows{
+                    width: auto;
+                }
+            
+            }
+    }
+}
