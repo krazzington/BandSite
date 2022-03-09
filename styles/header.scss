@@ -2,38 +2,27 @@
 @use './partials/variables' as *;
 @use './partials/mediaQueries' as *;
 
-* {
-    font-family: 'AvenirNext LT Pro', serif;
-    margin: 0;
-}
-
 // header section
 .header {
     background-color: $blackBg;
-    color: $whiteTextClr;
+    height: 15vh;
+    padding: 0;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    
-    
-    
 
     &__site-logo {
-    text-transform: uppercase;
-    width: auto;
-    font-size: 24px;
-    line-height: 32px;
-    font-weight: 700;
     display: flex;
-    justify-content: center;
-    padding: 1% 3% 2%;
+    align-items: center;
+    
+    padding: 2% 10% 0;
+    max-width: 120px;
+    max-height: 20px;
     }
     
     &__nav-list {
         list-style: none;
         display: flex;
         flex-direction: row;
-        padding: 0 2% 4%;
         
         
         &--nav-bio{
@@ -92,7 +81,6 @@
                 &--nav-shows{
                     width: auto;
                 }
-            
             }
     }
 }

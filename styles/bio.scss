@@ -1,0 +1,17 @@
+@use './partials/fonts' as *;
+@use './partials/variables' as *;
+@use './partials/mediaQueries' as *;
+
+* {
+    font-family: 'AvenirNext LT Pro', serif;
+    margin: 0;
+}
+
+body {
+    padding: 0 16px;
+
+
+    @include tablet {
+        padding: 0 36px;
+    }
+}

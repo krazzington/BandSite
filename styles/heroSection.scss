@@ -1,0 +1,17 @@
+@use './partials/variables' as *;
+
+//hero section
+.hero {
+    height: 40vh;
+    background-image: url("../assets/images/hero-bio.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    &__band-name {
+        display: flex;
+        justify-content: center;
+        color: $whiteTextClr;
+        align-items: center;
+        
+    }
+}
