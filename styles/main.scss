@@ -1,8 +1,14 @@
+@use './partials/fonts' as *;
+@use './partials/variables' as *;
+@use './partials/mediaQueries' as *;
+
 // main section
 .main {
-    padding: 0 16px;
+    
     
     &__img {
-        
+        padding: 16px 0;
+        width: 100%;
+        height: 40%;
     }
 }

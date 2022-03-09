@@ -3,3 +3,11 @@
 @use './partials/mediaQueries' as *;
 
 // footer section
+.footer {
+    background-color: $blackBg;
+    color: $whiteTextClr;
+    
+    &__social-icons{
+
+    }
+}

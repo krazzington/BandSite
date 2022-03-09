@@ -1,4 +1,6 @@
+@use './partials/fonts' as *;
 @use './partials/variables' as *;
+@use './partials/mediaQueries' as *;
 
 //hero section
 .hero {
