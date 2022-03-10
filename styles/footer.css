@@ -1,25 +1,35 @@
 @font-face {
-  font-family: "AvenirNext LT Pro";
+  font-family: "AvenirNext LT Pro-Bold";
   src: url("../assets/fonts/AvenirNextLTPro-Bold.woff2") format("woff2"), url("../assets/fonts/AvenirNextLTPro-Bold.woff") format("woff");
   font-weight: bolder;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: "AvenirNext LT Pro";
+  font-family: "AvenirNext LT Pro-Demi";
   src: url("../../assets/fonts/AvenirNextLTPro-Demi.woff2") format("woff2"), url("../../assets/fonts/AvenirNextLTPro-Demi.woff") format("woff");
   font-weight: bold;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: "AvenirNext LT Pro";
+  font-family: "AvenirNext LT Pro-Regular";
   src: url("../../assets/fonts/AvenirNextLTPro-Regular.woff2") format("woff2"), url("../../assets/fonts/AvenirNextLTPro-Regular.woff") format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 .footer {
+  padding: 16px 16px;
   background-color: #323232;
   color: #FFFFFF;
+}
+.footer__header {
+  font-family: AvenirNext LT Pro-Bold;
+}
+.footer__social-icons {
+  padding: 16px 0;
+}
+.footer__social-icons--img {
+  padding: 0 4% 0 0;
 }/*# sourceMappingURL=footer.css.map */

@@ -4,10 +4,22 @@
 
 // footer section
 .footer {
+    padding: 16px 16px;
     background-color: $blackBg;
     color: $whiteTextClr;
-    
-    &__social-icons{
 
+    &__header {
+        font-family: AvenirNext LT Pro-Bold;
+    }
+
+    &__social-icons{
+        padding: 16px 0;
+        
+        &--img {
+            padding: 0 4% 0 0;
+        }
+        &--img p {
+            
+        }
     }
 }

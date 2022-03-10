@@ -3,15 +3,15 @@
 @use './partials/mediaQueries' as *;
 
 * {
-    font-family: 'AvenirNext LT Pro', serif;
+    font-family: 'AvenirNext LT Pro-Regular', serif;
     margin: 0;
 }
 
-body {
-    padding: 0 16px;
+// body {
+//     padding: 0 16px;
 
 
-    @include tablet {
-        padding: 0 36px;
-    }
-}
+//     @include tablet {
+//         padding: 0 36px;
+//     }
+// }

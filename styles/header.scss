@@ -5,25 +5,30 @@
 // header section
 .header {
     background-color: $blackBg;
-    height: 15vh;
     padding: 0;
+    margin: 0;
     display: flex;
     flex-direction: column;
 
-    &__site-logo {
+    &__logo-container {
     display: flex;
-    align-items: center;
+    justify-content: center;
+    width: 100%;
     
-    padding: 2% 10% 0;
-    max-width: 120px;
-    max-height: 20px;
+    
+        
+        &--img {
+            max-width: 120px;
+            max-height: 20px;
+            padding: 5% 0 3%;
+        }
     }
     
     &__nav-list {
         list-style: none;
         display: flex;
         flex-direction: row;
-        
+        padding-bottom: 3%;
         
         &--nav-bio{
             flex: 1;
@@ -51,12 +56,12 @@
         //     color: $silverClr;
         // }
 
-        // &--nav-bio:active{
-        //     border-bottom: 3px solid $offWhiteClr;
-        // }
-        // &--nav-shows:active{
-        //     border-bottom: 3px solid $offWhiteClr;
-        // }
+        &--nav-bio:active{
+            border-bottom: 3px solid $offWhiteClr;
+        }
+        &--nav-shows:active{
+            border-bottom: 3px solid $offWhiteClr;
+        }
     
     }
 
@@ -65,7 +70,7 @@
         flex-wrap: wrap;
         width: auto;
         
-        &__site-logo {
+        &__logo-container {
             justify-content: flex-start;
             }
             
