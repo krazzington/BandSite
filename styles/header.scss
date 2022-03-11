@@ -9,12 +9,24 @@
     margin: 0;
     display: flex;
     flex-direction: column;
-
-    &__logo-container {
-    display: flex;
-    justify-content: center;
-    width: 100%;
     
+    @include tablet {
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 0;
+        height: 10vh;
+        width: auto;
+    }
+
+        &__logo-container {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        
+        @include tablet{
+            
+        }
     
         
         &--img {
@@ -62,30 +74,5 @@
         &--nav-shows:active{
             border-bottom: 3px solid $offWhiteClr;
         }
-    
-    }
-
-    @include tablet {
-        display: inline;
-        flex-wrap: wrap;
-        width: auto;
-        
-        &__logo-container {
-            justify-content: flex-start;
-            }
-            
-            &__nav-list {
-                display: inline-block;
-                flex-wrap: wrap;
-                width: 100%;
-                
-                
-                &--nav-bio{
-                    width: auto;
-                }
-                &--nav-shows{
-                    width: auto;
-                }
-            }
     }
 }

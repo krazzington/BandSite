@@ -20,12 +20,13 @@
   font-display: swap;
 }
 .footer {
+  font-family: "AvenirNext LT Pro-Regular", serif;
   padding: 16px 16px;
   background-color: #323232;
   color: #FFFFFF;
 }
 .footer__header {
-  font-family: AvenirNext LT Pro-Bold;
+  font-family: "AvenirNext LT Pro-Bold";
 }
 .footer__social-icons {
   padding: 16px 0;

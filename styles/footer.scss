@@ -4,12 +4,13 @@
 
 // footer section
 .footer {
+    font-family:'AvenirNext LT Pro-Regular', serif;
     padding: 16px 16px;
     background-color: $blackBg;
     color: $whiteTextClr;
 
     &__header {
-        font-family: AvenirNext LT Pro-Bold;
+        font-family: 'AvenirNext LT Pro-Bold';
     }
 
     &__social-icons{
