@@ -10,22 +10,23 @@
     display: flex;
     flex-direction: column;
     
-    @include tablet {
-        flex-direction: row;
-        align-items: center;
-        justify-content: flex-start;
-        padding: 0;
-        height: 10vh;
-        width: auto;
-    }
+    
+        @include tablet {
+            flex-direction: row;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 0;
+            height: 10vh;
+            width: auto;
+        }
 
-        &__logo-container {
-        display: flex;
-        justify-content: center;
-        width: 100%;
+    &__logo-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
         
         @include tablet{
-            
+
         }
     
         
@@ -40,7 +41,8 @@
         list-style: none;
         display: flex;
         flex-direction: row;
-        padding-bottom: 3%;
+        
+        height: 2rem;
         
         &--nav-bio{
             flex: 1;
@@ -50,18 +52,25 @@
             flex: 1;
             text-align: center;
         }
+        &--nav-bio:hover{
+            border-bottom: 5px solid $offWhiteClr;
+            padding: 0 0 12px;
+            box-sizing: border-box;
+        }
+        &--nav-shows:hover{
+            border-bottom: 5px solid $offWhiteClr;
+            padding: 0 0 12px;
+            box-sizing: border-box;
+        }
 
         &--link {
             text-decoration: none;
+            color: $whiteTextClr;
         }
-        &--link:active {
-            border-bottom: 3px solid $whiteTextClr;
-            padding: 0 35% 8%;   
-        }
-        &--link:hover {
-            border-bottom: 3px solid $offWhiteClr;
-            padding: 0 35% 8%;
-        }
+        // &--link:hover {
+        //     border-bottom: 3px solid $offWhiteClr;
+        //     padding: 0 34% 8%;
+        // }
         // &--link:inactive {
         //     border-bottom: 3px solid $offWhiteClr;
         //     padding: 0 35% 8%;
