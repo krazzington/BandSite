@@ -23,3 +23,8 @@ $offWhiteClr: #FAFAFA;
     padding-top: 1.5rem;
 }
 
+@mixin section-header-tablet {
+    font-family: 'AvenirNext LT Pro-Demi';
+    font-size: 3rem;
+    padding-top: 2rem;
+}

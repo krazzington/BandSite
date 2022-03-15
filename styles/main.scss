@@ -13,6 +13,10 @@
 
     &__header {
         @include section-header;
+        
+        @include tablet {
+            @include section-header-tablet;
+        }
     }
 
     &__img {

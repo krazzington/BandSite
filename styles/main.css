@@ -33,6 +33,13 @@
   font-size: 2rem;
   padding-top: 1.5rem;
 }
+@media only screen and (min-width: 768px) {
+  .main__header {
+    font-family: "AvenirNext LT Pro-Demi";
+    font-size: 3rem;
+    padding-top: 2rem;
+  }
+}
 .main__img {
   padding: 16px 0;
   width: 100%;
