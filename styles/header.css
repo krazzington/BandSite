@@ -30,8 +30,6 @@
   .header {
     flex-direction: row;
     align-items: center;
-    justify-content: flex-start;
-    padding: 0;
     height: 10vh;
     width: auto;
   }
@@ -41,16 +39,32 @@
   justify-content: center;
   width: 100%;
 }
+@media only screen and (min-width: 768px) {
+  .header__logo-container {
+    justify-content: flex-start;
+    margin: 1rem;
+  }
+}
 .header__logo-container--img {
   max-width: 120px;
   max-height: 20px;
   padding: 5% 0 3%;
+}
+@media only screen and (min-width: 768px) {
+  .header__logo-container--img {
+    padding: 0;
+  }
 }
 .header__nav-list {
   list-style: none;
   display: flex;
   flex-direction: row;
   height: 2rem;
+}
+@media only screen and (min-width: 768px) {
+  .header__nav-list {
+    padding: 0;
+  }
 }
 .header__nav-list--nav-bio {
   flex: 1;

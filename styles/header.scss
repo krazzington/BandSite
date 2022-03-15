@@ -14,8 +14,6 @@
         @include tablet {
             flex-direction: row;
             align-items: center;
-            justify-content: flex-start;
-            padding: 0;
             height: 10vh;
             width: auto;
         }
@@ -26,14 +24,19 @@
     width: 100%;
         
         @include tablet{
-
+            justify-content: flex-start;
+            margin: 1rem;
+            
         }
     
-        
         &--img {
             max-width: 120px;
             max-height: 20px;
             padding: 5% 0 3%;
+            
+            @include tablet{
+                padding: 0;
+            }
         }
     }
     
@@ -41,8 +44,11 @@
         list-style: none;
         display: flex;
         flex-direction: row;
-        
         height: 2rem;
+        
+        @include tablet{
+            padding: 0;
+        }
         
         &--nav-bio{
             flex: 1;

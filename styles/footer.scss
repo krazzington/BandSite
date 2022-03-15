@@ -8,6 +8,10 @@
     background-color: $blackBg;
     color: $whiteTextClr;
 
+    @include tablet {
+        padding: 0 36px;
+    }
+
     &__header {
         @include section-header;
     }
