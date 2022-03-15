@@ -9,7 +9,11 @@
     color: $whiteTextClr;
 
     @include tablet {
-        padding: 0 36px;
+        padding: 36px;
+        display: flex;
+        flex-flow: row wrap;
+        position: relative;
+        
     }
 
     &__header {
@@ -31,14 +35,35 @@
     }
 
     &__contact-div {
+        
+        @include tablet {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        width: 100%;
+        padding: 2rem 0;
+        }
 
         &--contact-info {
 
         }
     }
 
+    &__logo-container {
+
+        @include tablet {
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+    }
+
     &__rights-reserved {
         padding-top: 3%;
+
+        @include tablet {
+            padding-top: 0;
+        }
     }
 }
 
