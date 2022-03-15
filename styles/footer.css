@@ -1,36 +1,42 @@
 @font-face {
   font-family: "AvenirNext LT Pro-Bold";
   src: url("../assets/fonts/AvenirNextLTPro-Bold.woff2") format("woff2"), url("../assets/fonts/AvenirNextLTPro-Bold.woff") format("woff");
-  font-weight: bolder;
+  font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "AvenirNext LT Pro-Demi";
   src: url("../../assets/fonts/AvenirNextLTPro-Demi.woff2") format("woff2"), url("../../assets/fonts/AvenirNextLTPro-Demi.woff") format("woff");
-  font-weight: bold;
+  font-weight: 600;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "AvenirNext LT Pro-Regular";
   src: url("../../assets/fonts/AvenirNextLTPro-Regular.woff2") format("woff2"), url("../../assets/fonts/AvenirNextLTPro-Regular.woff") format("woff");
-  font-weight: normal;
+  font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 .footer {
-  font-family: "AvenirNext LT Pro-Regular", serif;
-  padding: 16px 16px;
+  padding: 0 16px;
   background-color: #323232;
   color: #FFFFFF;
 }
 .footer__header {
-  font-family: "AvenirNext LT Pro-Bold";
+  font-family: "AvenirNext LT Pro-Regular";
+  font-size: 2rem;
+  padding-top: 2rem;
 }
 .footer__social-icons {
   padding: 16px 0;
 }
 .footer__social-icons--img {
-  padding: 0 4% 0 0;
+  padding: 0 1.5rem 0 0;
+  width: 2rem;
+  height: 2rem;
+}
+.footer__contact-div--contact-info p {
+  color: red;
 }/*# sourceMappingURL=footer.css.map */

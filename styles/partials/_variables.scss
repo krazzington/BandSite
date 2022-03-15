@@ -15,3 +15,10 @@ $mercuryClr: #E1E1E1;
 
 //Alabaster: Alternative light background color
 $offWhiteClr: #FAFAFA;
+
+// section header mixin
+@mixin section-header {
+    font-family: 'AvenirNext LT Pro-Regular';
+    font-size: 2rem;
+    padding-top: 2rem;
+}

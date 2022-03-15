@@ -1,31 +1,37 @@
 @font-face {
   font-family: "AvenirNext LT Pro-Bold";
   src: url("../assets/fonts/AvenirNextLTPro-Bold.woff2") format("woff2"), url("../assets/fonts/AvenirNextLTPro-Bold.woff") format("woff");
-  font-weight: bolder;
+  font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "AvenirNext LT Pro-Demi";
   src: url("../../assets/fonts/AvenirNextLTPro-Demi.woff2") format("woff2"), url("../../assets/fonts/AvenirNextLTPro-Demi.woff") format("woff");
-  font-weight: bold;
+  font-weight: 600;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "AvenirNext LT Pro-Regular";
   src: url("../../assets/fonts/AvenirNextLTPro-Regular.woff2") format("woff2"), url("../../assets/fonts/AvenirNextLTPro-Regular.woff") format("woff");
-  font-weight: normal;
+  font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 .main {
-  padding: 16px 16px;
+  padding: 0 16px;
+  color: #323232;
 }
 @media only screen and (min-width: 768px) {
   .main {
     padding: 0 36px;
   }
+}
+.main__header {
+  font-family: "AvenirNext LT Pro-Regular";
+  font-size: 2rem;
+  padding-top: 2rem;
 }
 .main__img {
   padding: 16px 0;
@@ -33,6 +39,14 @@
   height: 40%;
 }
 .main__bold-quote {
-  font-size: larger;
+  font-size: 1.5rem;
   font-weight: 700;
+}
+.main__subheader {
+  color: #000000;
+  font-size: 1.4rem;
+}
+.main__para-div--regular-paragraph {
+  font-size: 1.3rem;
+  padding: 1rem 0;
 }/*# sourceMappingURL=main.css.map */

@@ -4,10 +4,15 @@
 
 // main section
 .main {
-    padding: 16px 16px;
+    padding: 0 16px;
+    color: $blackBg;
 
     @include tablet {
         padding: 0 36px;
+    }
+
+    &__header {
+        @include section-header;
     }
 
     &__img {
@@ -17,9 +22,19 @@
     }
 
     &__bold-quote {
-        font-size: larger;
+        font-size: 1.5rem;
         font-weight: 700;
     }
+    &__subheader {
+        color: $darkBlackClr;
+        font-size: 1.4rem;
+    }
+    &__para-div {
+        
 
-    
+        &--regular-paragraph {
+            font-size: 1.3rem;
+            padding: 1rem 0;
+        }
+    }
 }

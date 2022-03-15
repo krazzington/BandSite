@@ -1,21 +1,21 @@
 @font-face {
   font-family: "AvenirNext LT Pro-Bold";
   src: url("../assets/fonts/AvenirNextLTPro-Bold.woff2") format("woff2"), url("../assets/fonts/AvenirNextLTPro-Bold.woff") format("woff");
-  font-weight: bolder;
+  font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "AvenirNext LT Pro-Demi";
   src: url("../../assets/fonts/AvenirNextLTPro-Demi.woff2") format("woff2"), url("../../assets/fonts/AvenirNextLTPro-Demi.woff") format("woff");
-  font-weight: bold;
+  font-weight: 600;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "AvenirNext LT Pro-Regular";
   src: url("../../assets/fonts/AvenirNextLTPro-Regular.woff2") format("woff2"), url("../../assets/fonts/AvenirNextLTPro-Regular.woff") format("woff");
-  font-weight: normal;
+  font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
@@ -24,11 +24,22 @@
   background-image: url("../assets/images/hero-bio.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  display: flex;
-  justify-content: start;
   color: #FFFFFF;
-  align-items: center;
+  position: relative;
+}
+.hero__overlay {
+  background-color: rgba(50, 50, 50, 0.5);
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
 }
 .hero__band-name {
-  padding: 16px;
+  font-family: "AvenirNext LT Pro-Regular";
+  font-size: 2rem;
+  padding-top: 2rem;
+  display: flex;
+  justify-content: flex-start;
+  text-align: center;
 }/*# sourceMappingURL=heroSection.css.map */
