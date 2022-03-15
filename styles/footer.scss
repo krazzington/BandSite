@@ -27,9 +27,13 @@
         &--contact-info {
 
         }
-
-        &--contact-info p {
-            color: red;
-        }
     }
+
+    &__rights-reserved {
+        padding-top: 3%;
+    }
+}
+
+.footer-copy {
+    font-weight: 700;
 }

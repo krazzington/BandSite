@@ -37,6 +37,10 @@
   width: 2rem;
   height: 2rem;
 }
-.footer__contact-div--contact-info p {
-  color: red;
+.footer__rights-reserved {
+  padding-top: 3%;
+}
+
+.footer-copy {
+  font-weight: 700;
 }/*# sourceMappingURL=footer.css.map */
