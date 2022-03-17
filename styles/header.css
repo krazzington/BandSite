@@ -43,6 +43,7 @@
   .header__logo-container {
     justify-content: flex-start;
     margin: 1rem;
+    width: auto;
   }
 }
 .header__logo-container--img {
@@ -52,7 +53,7 @@
 }
 @media only screen and (min-width: 768px) {
   .header__logo-container--img {
-    padding: 0;
+    padding: 0 0 0 16px;
   }
 }
 .header__nav-list {
@@ -64,25 +65,48 @@
 @media only screen and (min-width: 768px) {
   .header__nav-list {
     padding: 0;
+    align-items: center;
   }
 }
 .header__nav-list--nav-bio {
   flex: 1;
   text-align: center;
 }
+@media only screen and (min-width: 768px) {
+  .header__nav-list--nav-bio {
+    padding-left: 32px;
+  }
+}
 .header__nav-list--nav-shows {
   flex: 1;
   text-align: center;
+}
+@media only screen and (min-width: 768px) {
+  .header__nav-list--nav-shows {
+    padding-left: 32px;
+  }
 }
 .header__nav-list--nav-bio:hover {
   border-bottom: 5px solid #FAFAFA;
   padding: 0 0 12px;
   box-sizing: border-box;
 }
+@media only screen and (min-width: 768px) {
+  .header__nav-list--nav-bio:hover {
+    font-weight: 600;
+    padding-bottom: 24px;
+  }
+}
 .header__nav-list--nav-shows:hover {
   border-bottom: 5px solid #FAFAFA;
   padding: 0 0 12px;
   box-sizing: border-box;
+}
+@media only screen and (min-width: 768px) {
+  .header__nav-list--nav-shows:hover {
+    font-weight: 600;
+    padding-bottom: 24px;
+  }
 }
 .header__nav-list--link {
   text-decoration: none;

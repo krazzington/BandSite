@@ -25,6 +25,8 @@
         @include tablet{
             justify-content: flex-start;
             margin: 1rem;
+            width: auto;
+            
             
         }
     
@@ -34,7 +36,7 @@
             padding: 5% 0 3%;
             
             @include tablet{
-                padding: 0;
+                padding: 0 0 0 16px;
             }
         }
     }
@@ -47,25 +49,46 @@
         
         @include tablet{
             padding: 0;
+            align-items: center;
         }
         
         &--nav-bio{
             flex: 1;
             text-align: center;
+            
+            @include tablet{
+                
+                padding-left: 32px;
+            }
         }
         &--nav-shows{
             flex: 1;
             text-align: center;
+            
+            @include tablet{
+                
+                padding-left: 32px;
+            }
         }
         &--nav-bio:hover{
             border-bottom: 5px solid $offWhiteClr;
             padding: 0 0 12px;
             box-sizing: border-box;
+            
+            @include tablet{
+                font-weight: 600;
+                padding-bottom: 24px;
+            }
         }
         &--nav-shows:hover{
             border-bottom: 5px solid $offWhiteClr;
             padding: 0 0 12px;
             box-sizing: border-box;
+
+            @include tablet{
+                font-weight: 600;
+                padding-bottom: 24px;
+            }
         }
 
         &--link {
