@@ -35,10 +35,21 @@
     }
     &__para-div {
         
+        @include tablet {
+            display: flex;
+            flex-direction: row;
+            
+            justify-content: space-between;
+        }
 
         &--regular-paragraph {
             font-size: 1.3rem;
             padding: 1rem 0;
+
+            @include tablet {
+            width: 90%; 
+            max-width: 50%;  
+            }
         }
     }
 }
