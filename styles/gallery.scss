@@ -4,7 +4,7 @@
 
 //gallery secction
 .gallery {
-    padding: 0 16px;
+    @include section-padding-mobile;
     color: $blackBg;
     background-color: $offWhiteClr;
 
@@ -18,6 +18,11 @@
 
         @include tablet {
             @include section-header-tablet;
+        }
+
+        @include desktop {
+            @include section-header;
+        
         }
     }
 

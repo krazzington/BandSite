@@ -1,6 +1,7 @@
 //media query
 $tabletBp: 768px;
-$desktopBP: 1280px;
+
+$desktopBp: 1280px;
 
 @mixin tablet {
     @media only screen and (min-width: $tabletBp) {

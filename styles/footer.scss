@@ -4,7 +4,7 @@
 
 // footer section
 .footer {
-    padding: 0 16px;
+    @include section-padding-mobile;
     background-color: $blackBg;
     color: $whiteTextClr;
 
@@ -21,7 +21,14 @@
         
         @include tablet {
             @include section-header-tablet;
+            
         }
+
+        @include desktop {
+            @include section-header;
+        
+        }
+
     }
 
     &__social-icons{

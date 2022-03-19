@@ -20,7 +20,7 @@
   font-display: swap;
 }
 .gallery {
-  padding: 0 16px;
+  padding: 3%;
   color: #323232;
   background-color: #FAFAFA;
 }
@@ -32,14 +32,21 @@
 }
 .gallery__header {
   font-family: "AvenirNext LT Pro-Regular";
-  font-size: 2rem;
-  padding-top: 1.5rem;
+  font-size: 4.5vh;
+  padding-top: 3%;
 }
 @media only screen and (min-width: 768px) {
   .gallery__header {
     font-family: "AvenirNext LT Pro-Demi";
     font-size: 3rem;
     padding-top: 2rem;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .gallery__header {
+    font-family: "AvenirNext LT Pro-Regular";
+    font-size: 4.5vh;
+    padding-top: 3%;
   }
 }
 .gallery__images-div {

@@ -27,6 +27,11 @@
   color: #FFFFFF;
   position: relative;
 }
+@media only screen and (min-width: 768px) {
+  .hero {
+    height: 80vh;
+  }
+}
 .hero__overlay {
   background-color: rgba(50, 50, 50, 0.5);
   position: absolute;
@@ -37,9 +42,18 @@
 }
 .hero__band-name {
   font-family: "AvenirNext LT Pro-Regular";
-  font-size: 2rem;
-  padding-top: 1.5rem;
-  display: flex;
-  justify-content: flex-start;
-  text-align: center;
+  font-size: 4.5vh;
+  padding-top: 3%;
+  position: absolute;
+  padding: 0 0 0 16px;
+  top: 45%;
+}
+@media only screen and (min-width: 768px) {
+  .hero__band-name {
+    font-family: "AvenirNext LT Pro-Demi";
+    font-size: 3rem;
+    padding-top: 2rem;
+    padding: 0 0 0 32px;
+    font-size: 60px;
+  }
 }/*# sourceMappingURL=heroSection.css.map */

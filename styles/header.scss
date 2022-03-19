@@ -50,6 +50,7 @@
         @include tablet{
             padding: 0;
             align-items: center;
+            // justify-content: center;
         }
         
         &--nav-bio{
@@ -57,7 +58,6 @@
             text-align: center;
             
             @include tablet{
-                
                 padding-left: 32px;
             }
         }
@@ -66,8 +66,8 @@
             text-align: center;
             
             @include tablet{
-                
                 padding-left: 32px;
+
             }
         }
         &--nav-bio:hover{
@@ -88,6 +88,7 @@
             @include tablet{
                 font-weight: 600;
                 padding-bottom: 24px;
+                
             }
         }
 

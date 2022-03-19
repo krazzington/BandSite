@@ -19,12 +19,34 @@ $offWhiteClr: #FAFAFA;
 // section header mixin
 @mixin section-header {
     font-family: 'AvenirNext LT Pro-Regular';
-    font-size: 2rem;
-    padding-top: 1.5rem;
+    font-size: 4.5vh;
+    padding-top: 3%;
 }
 
 @mixin section-header-tablet {
     font-family: 'AvenirNext LT Pro-Demi';
     font-size: 3rem;
     padding-top: 2rem;
+}
+
+// @mixin section-header-desktop {
+//     font-family: 'AvenirNext LT Pro-Regular';
+//     font-size: 2rem;
+    
+// }
+
+@mixin section-padding-mobile {
+    padding: 3%;
+}
+
+@mixin section-padding-tablet {
+    padding: 36px;
+}
+
+@mixin section-padding-desktop {
+    //padding: ;
+}
+
+@mixin main-padding-tablet {
+    padding: 0 9%;
 }
