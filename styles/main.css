@@ -20,12 +20,12 @@
   font-display: swap;
 }
 .main {
-  padding: 3%;
+  padding: 4.5%;
   color: #323232;
 }
 @media only screen and (min-width: 768px) {
   .main {
-    padding: 36px;
+    padding: 4.5%;
   }
 }
 .main__header {
@@ -61,9 +61,14 @@
   font-size: 1.5rem;
   font-weight: 700;
   display: flex;
-  height: 18vh;
+  height: 15rem;
   flex-direction: column;
   justify-content: space-between;
+}
+@media only screen and (min-width: 412px) {
+  .main__bold-quote {
+    height: 9rem;
+  }
 }
 @media only screen and (min-width: 768px) {
   .main__bold-quote {
@@ -86,6 +91,11 @@
   color: #000000;
   font-size: 110%;
   padding-top: 7%;
+}
+@media only screen and (min-width: 412px) {
+  .main__subheader-div {
+    padding-top: 10%;
+  }
 }
 @media only screen and (min-width: 768px) {
   .main__subheader-div {

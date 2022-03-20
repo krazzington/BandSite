@@ -20,13 +20,13 @@
   font-display: swap;
 }
 .gallery {
-  padding: 3%;
+  padding: 4.5%;
   color: #323232;
   background-color: #FAFAFA;
 }
 @media only screen and (min-width: 768px) {
   .gallery {
-    padding: 36px;
+    padding: 4.5%;
     margin: 0;
   }
 }

@@ -33,9 +33,9 @@
         }
     
         &--img {
-            @include bandsite-logo;
-            
-            padding: 5% 0 3%;
+            max-width: 140px;
+            max-height: 40px;
+            @include bandsite-logo-mobile;
             //Do not change above **************
 
             @include tablet{

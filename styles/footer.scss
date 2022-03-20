@@ -103,14 +103,14 @@
         }
         
         &--img {
-
+            @include bandsite-logo-mobile
             
         }
     
     }
 
     &--rights-reserved {
-        padding-top: 3%;
+        
 
         @include tablet {
             padding-top: 0;

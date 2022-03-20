@@ -36,18 +36,24 @@ $offWhiteClr: #FAFAFA;
 // }
 
 ///--------- Bandsite Logo
-@mixin bandsite-logo {
+@mixin bandsite-logo-mobile {
+    padding: 5% 0;
+    min-width: 32.5%;
+    min-height: 32.5%;
+}
+
+@mixin bandsite-logo-tablet {
     min-width: 75%;
     min-height: 75%;
 }
 
 //-------   Paddings
 @mixin section-padding-mobile {
-    padding: 3%;
+    padding: 4.5%;
 }
 
 @mixin section-padding-tablet {
-    padding: 36px;
+    padding: 4.5%;
 }
 
 @mixin section-padding-desktop {

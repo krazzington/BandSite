@@ -44,15 +44,15 @@
   font-family: "AvenirNext LT Pro-Demi";
   font-size: 4.5vh;
   padding-top: 4%;
+  padding: 4.5%;
   position: absolute;
-  padding: 0 0 0 16px;
-  top: 45%;
+  top: 37.5%;
 }
 @media only screen and (min-width: 768px) {
   .hero__band-name {
     font-family: "AvenirNext LT Pro-Demi";
     font-size: 5.5vh;
-    padding: 0 0 0 32px;
-    font-size: 60px;
+    padding-left: 4.5%;
+    font-size: 4rem;
   }
 }/*# sourceMappingURL=heroSection.css.map */

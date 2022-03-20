@@ -27,15 +27,15 @@
     &__band-name {
 
         @include section-header;
+        @include section-padding-mobile;
         position: absolute;
-        padding: 0 0 0 16px;
-        top: 45%;
+        top: 37.5%;
         
 
         @include tablet {
             @include section-header-tablet;
-            padding: 0 0 0 32px;
-            font-size: 60px;
+            padding-left: 4.5%;
+            font-size: 4rem;
         }
     }
 }
