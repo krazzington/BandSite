@@ -31,7 +31,7 @@
 }
 @media only screen and (min-width: 1280px) {
   .footer {
-    padding: 4% 10%;
+    padding: 2% 10%;
   }
 }
 .footer__container {
@@ -70,7 +70,8 @@
   .footer__container--header--h1 {
     font-family: "AvenirNext LT Pro-Demi";
     font-size: 200%;
-    padding-top: 4%;
+    padding-top: 2%;
+    padding-bottom: 2%;
   }
 }
 .footer__container--social-icons {

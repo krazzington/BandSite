@@ -25,7 +25,7 @@
         }
 
         @include desktop {
-            @include section-header;
+            @include section-header-desktop;
         
         }
     }
@@ -48,7 +48,10 @@
             @include tablet {
                 width: 30%;
                 height: auto;
-                
+            }
+            @include desktop {
+                padding: 1%;
+                width: 31%;
             }
         }
     }

@@ -25,7 +25,7 @@
         }
 
         @include desktop {
-            @include section-header;
+            @include section-header-desktop;
         
         }
     }
@@ -38,6 +38,9 @@
             padding: 5% 9%;
             max-width: 80%;
             height: 40vw;
+        }
+        @include desktop {
+            padding: 2% 9%;
         }
     }
 
@@ -52,23 +55,33 @@
         @include mid-mobile {
             height: 9rem;
         }
-
         @include tablet {
             @include main-padding-tablet;
             height: 8.5rem;
         } 
+        @include desktop {
+            height: 6rem;
+        }
         
 
         &--top {
             @include tablet {
                 font-family: 'AvenirNext LT Pro-Demi';
                 font-size: 110%;
+                
+            }
+            @include desktop {
+                font-size: 90%;
+                max-width: 80%;
             }
         }
 
         &--bottom {
             @include tablet {
             font-size: 90%;
+            }
+            @include desktop {
+                font-size: 80%;
             }
         }
     }
@@ -88,6 +101,10 @@
             font-size: 150%;
             font-weight: 700;
         }
+        @include desktop {
+            padding-top: 4%;
+            font-size: 125%;
+        }
     }
 
     &__para-div {
@@ -106,8 +123,12 @@
             padding-top: 4%;
 
             @include tablet {
-            min-width: 45%; 
-            max-width: 45%;  
+                min-width: 45%; 
+                max-width: 45%;  
+            }
+            @include desktop {
+                font-size: 85%;
+                padding-top: 2%;
             }
         }
     }

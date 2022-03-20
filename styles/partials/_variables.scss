@@ -29,6 +29,13 @@ $offWhiteClr: #FAFAFA;
     padding-top: 2%;
 }
 
+@mixin section-header-desktop {
+    font-family: 'AvenirNext LT Pro-Demi';
+    font-size: 200%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
 // @mixin section-header-desktop {
 //     font-family: 'AvenirNext LT Pro-Regular';
 //     font-size: 2rem;
@@ -59,7 +66,7 @@ $offWhiteClr: #FAFAFA;
 }
 
 $side-padding-desktop: 10%;
-$end-padding-desktop: 4%;
+$end-padding-desktop: 2%;
 
 @mixin section-padding-desktop {
     padding: $end-padding-desktop $side-padding-desktop;

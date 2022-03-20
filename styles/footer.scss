@@ -43,12 +43,11 @@
                         @include section-header-tablet;
                         padding-top: 0;
                         width: 100%;
-                        
                     }
-
                     @include desktop {
-                        @include section-header;
+                        @include section-header-desktop;
                     }
+                    
                 }
             }
             &--social-icons {
