@@ -61,14 +61,25 @@
   font-size: 1.5rem;
   font-weight: 700;
   display: flex;
-  height: 10rem;
+  height: 18vh;
   flex-direction: column;
   justify-content: space-between;
 }
 @media only screen and (min-width: 768px) {
   .main__bold-quote {
     padding: 0 9%;
-    height: 8rem;
+    height: 8.5rem;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .main__bold-quote--top {
+    font-weight: 700;
+    font-size: 110%;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .main__bold-quote--bottom {
+    font-size: 90%;
   }
 }
 .main__subheader-div {
@@ -79,6 +90,9 @@
 @media only screen and (min-width: 768px) {
   .main__subheader-div {
     padding: 0 9%;
+    padding-top: 7%;
+    font-size: 150%;
+    font-weight: 700;
   }
 }
 @media only screen and (min-width: 768px) {
@@ -95,6 +109,7 @@
 }
 @media only screen and (min-width: 768px) {
   .main__para-div--regular-paragraph {
-    width: 90%;
+    min-width: 45%;
+    max-width: 45%;
   }
 }/*# sourceMappingURL=main.css.map */

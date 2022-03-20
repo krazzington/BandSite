@@ -43,17 +43,26 @@
         font-size: 1.5rem;
         font-weight: 700;
         display: flex;
-        height: 10rem;
+        height: 18vh;
         flex-direction: column;
         justify-content: space-between;
         
         @include tablet {
             @include main-padding-tablet;
-            height: 8rem;
+            height: 8.5rem;
         } 
 
-        &--p {
+        &--top {
+            @include tablet {
+                font-weight: 700;
+                font-size: 110%;
+            }
+        }
 
+        &--bottom {
+            @include tablet {
+            font-size: 90%;
+            }
         }
     }
 
@@ -64,6 +73,9 @@
         
         @include tablet {
             @include main-padding-tablet;
+            padding-top: 7%;
+            font-size: 150%;
+            font-weight: 700;
         }
     }
 
@@ -83,8 +95,8 @@
             padding-top: 4%;
 
             @include tablet {
-            width: 90%; 
-            //max-width: 350px;  
+            min-width: 45%; 
+            max-width: 45%;  
             }
         }
     }
