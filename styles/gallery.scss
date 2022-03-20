@@ -12,6 +12,10 @@
         @include section-padding-tablet;
         margin: 0;
     }
+    @include desktop {
+        padding-left: 0;
+        @include section-padding-desktop;
+    }
 
     &__header {
         @include section-header;

@@ -19,14 +19,14 @@ $offWhiteClr: #FAFAFA;
 // section header mixin
 @mixin section-header {
     font-family: 'AvenirNext LT Pro-Demi';
-    font-size: 4.5vh;
+    font-size: 200%;
     padding-top: 4%;
 }
 
 @mixin section-header-tablet {
     font-family: 'AvenirNext LT Pro-Demi';
-    font-size: 5.5vh;
-    // padding-top: 2rem;
+    font-size: 300%;
+    padding-top: 2%;
 }
 
 // @mixin section-header-desktop {
@@ -38,14 +38,16 @@ $offWhiteClr: #FAFAFA;
 ///--------- Bandsite Logo
 @mixin bandsite-logo-mobile {
     padding: 5% 0;
-    min-width: 32.5%;
-    min-height: 32.5%;
+    min-width: 50%;
+    min-height: 50%;
 }
 
 @mixin bandsite-logo-tablet {
-    min-width: 75%;
-    min-height: 75%;
+    padding: 0;
+    min-width: 15%;
+    min-height: 15%;
 }
+
 
 //-------   Paddings
 @mixin section-padding-mobile {
@@ -56,12 +58,19 @@ $offWhiteClr: #FAFAFA;
     padding: 4.5%;
 }
 
+$side-padding-desktop: 10%;
+$end-padding-desktop: 4%;
+
 @mixin section-padding-desktop {
-    //padding: ;
+    padding: $end-padding-desktop $side-padding-desktop;
 }
 
 @mixin main-padding-tablet {
     padding: 0 9%;
 }
 
-
+//--------     Tablet Footer
+@mixin footer-container-spacing-tablet {
+max-width: 300px;
+min-width: 200px;
+}

@@ -12,7 +12,7 @@
     position: relative;
 
     @include tablet {
-        height: 80vh;
+        height: 100vh;
     }
     
     &__overlay {
@@ -36,6 +36,10 @@
             @include section-header-tablet;
             padding-left: 4.5%;
             font-size: 4rem;
+        }
+        @include desktop {
+            padding-left: 0;
+            @include section-padding-desktop;
         }
     }
 }

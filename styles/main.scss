@@ -12,7 +12,9 @@
 
     @include tablet {
         @include section-padding-tablet;
-        
+    }
+    @include desktop {
+        @include section-padding-desktop;
     }
 
     &__header {
@@ -55,10 +57,11 @@
             @include main-padding-tablet;
             height: 8.5rem;
         } 
+        
 
         &--top {
             @include tablet {
-                font-weight: 700;
+                font-family: 'AvenirNext LT Pro-Demi';
                 font-size: 110%;
             }
         }

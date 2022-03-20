@@ -11,47 +11,55 @@
     @include tablet {
         padding: 36px;
     }
+    @include desktop {      
+        @include section-padding-desktop;
+        
+    }
 
-        &__container {
-            
-            @include tablet {
-            
-            display: flex;
-            flex-flow: row wrap;
-            position: relative;
-            }
+    &__container {
+        
+        display: flex;
+        flex-direction: column;
+        
 
-            &--header-container {
+
+        @include tablet {
+        display: -webkit-flex;
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+        }
+
+            &--header{
 
                 @include tablet {
-                    display: flex;
-                    flex-direction: row;
-                    align-items: baseline;
-                    width: 100%;
+                    @include footer-container-spacing-tablet;
+                    flex: 1;
                 }
-                
-                &--header{
+                &--h1 {
                     @include section-header;
                 
                     @include tablet {
                         @include section-header-tablet;
                         padding-top: 0;
-                        width: 33%;
+                        width: 100%;
+                        
                     }
 
                     @include desktop {
                         @include section-header;
                     }
                 }
-
+            }
             &--social-icons {
-                padding: 16px 0;
+                padding: 4% 0;
                 
                 @include tablet {
                     display: flex;
                     padding: 0;
-                    // flex: 2;
                     width: 33%;
+                    flex: 1;
+                    @include footer-container-spacing-tablet;
                 }
 
                 &--img {
@@ -60,66 +68,75 @@
                     height: 2rem;
 
                     @include tablet {
-                        
+                       justify-content: center;
                     }
                 }
             }
-        }
-    
-
-    &--contact-div {
-        padding-bottom: 10%;
-
-
-        @include tablet {
-            display: flex;
-            flex-flow: row wrap;
-            width: 100%;
-            padding: 2rem 0;
+        
+        &--logo-container {
+            -webkit-order: 3;
+            @include bandsite-logo-mobile;
             
-           }
+            @include tablet {
+                -webkit-order: 2;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: flex-end;
+                width: 32%;
+                flex: 1;
+                @include footer-container-spacing-tablet;
+            }
+            @include desktop {
+                padding: 0;
 
-        &--contact-info {
-            line-height: 150%; 
-            flex: 1;
-
-            &--footer-copy{
-                font-weight: 700;
+            }
+            
+            &--anchor {
+    
+            }
+            
+            &--img {
+                
+                
+                @include tablet {
+                    @include section-header-tablet;
+                }
             }
         }
-    }
-
-    &--logo-container {
-
-        @include tablet {
-            position: absolute;
-            top: 2%;
-            right: 0;
-            
-        }
         
-        &--anchor {
-
-        }
-        
-        &--img {
-            @include bandsite-logo-mobile
-            
-        }
+        &--contact-div {
+            padding-bottom: 10%;
+            -webkit-order: 2;
     
-    }
+    
+            @include tablet {
+                display: flex;
+                flex-flow: row wrap;
+                width: 100%;
+                padding: 2rem 0;
+                
+                }
+    
+            &--contact-info {
+                line-height: 150%; 
+                flex: 1;
 
-    &--rights-reserved {
-        
-
-        @include tablet {
-            padding-top: 0;
+                @include tablet {
+                    @include footer-container-spacing-tablet;
+                }
+    
+                &--footer-copy{
+                    font-weight: 700;
+                }
+            }
+        }
+        &--rights-reserved {
+            -webkit-order: 4;
 
             @include tablet {
-                
+                padding-top: 0;
+                    
             }
         }
     }
-}
-
 }
