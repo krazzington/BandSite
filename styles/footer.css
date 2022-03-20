@@ -27,84 +27,88 @@
 @media only screen and (min-width: 768px) {
   .footer {
     padding: 36px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .footer__container {
     display: flex;
     flex-flow: row wrap;
     position: relative;
   }
 }
-.footer__header-container--header {
+@media only screen and (min-width: 768px) {
+  .footer__container--header-container {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    width: 100%;
+  }
+}
+.footer__container--header-container--header {
   font-family: "AvenirNext LT Pro-Demi";
   font-size: 4.5vh;
   padding-top: 4%;
 }
 @media only screen and (min-width: 768px) {
-  .footer__header-container--header {
+  .footer__container--header-container--header {
     font-family: "AvenirNext LT Pro-Demi";
     font-size: 5.5vh;
-    padding-top: 2rem;
+    padding-top: 0;
+    width: 33%;
   }
 }
 @media only screen and (min-width: 1280px) {
-  .footer__header-container--header {
+  .footer__container--header-container--header {
     font-family: "AvenirNext LT Pro-Demi";
     font-size: 4.5vh;
     padding-top: 4%;
   }
 }
-.footer__header-container--social-icons {
+.footer__container--header-container--social-icons {
   padding: 16px 0;
 }
 @media only screen and (min-width: 768px) {
-  .footer__header-container--social-icons {
+  .footer__container--header-container--social-icons {
     display: flex;
-    align-self: flex-end;
     padding: 0;
+    width: 33%;
   }
 }
-.footer__header-container--social-icons--img {
+.footer__container--header-container--social-icons--img {
   padding: 0 1.5rem 0 0;
   width: 2rem;
   height: 2rem;
 }
-@media only screen and (min-width: 768px) {
-  .footer__header-container--social-icons--img {
-    padding: 0 2%;
-  }
-}
-.footer__contact-div {
+.footer__container--contact-div {
   padding-bottom: 10%;
 }
 @media only screen and (min-width: 768px) {
-  .footer__contact-div {
+  .footer__container--contact-div {
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-between;
     width: 100%;
     padding: 2rem 0;
   }
 }
-.footer__contact-div--contact-info {
+.footer__container--contact-div--contact-info {
   line-height: 150%;
+  flex: 1;
 }
-.footer__contact-div--contact-info--footer-copy {
+.footer__container--contact-div--contact-info--footer-copy {
   font-weight: 700;
 }
-.footer__logo-container--anchor--img {
-  min-width: 35%;
-  min-height: 35%;
-}
 @media only screen and (min-width: 768px) {
-  .footer__logo-container {
+  .footer__container--logo-container {
     position: absolute;
-    top: 0;
+    top: 2%;
     right: 0;
   }
 }
-.footer__rights-reserved {
+.footer__container--rights-reserved {
   padding-top: 3%;
 }
 @media only screen and (min-width: 768px) {
-  .footer__rights-reserved {
+  .footer__container--rights-reserved {
     padding-top: 0;
   }
 }/*# sourceMappingURL=footer.css.map */

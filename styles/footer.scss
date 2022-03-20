@@ -10,34 +10,48 @@
 
     @include tablet {
         padding: 36px;
-        display: flex;
-        flex-flow: row wrap;
-        position: relative;
-        
     }
 
-    &__header-container {
-
-        
-        &--header{
-            @include section-header;
-        
+        &__container {
+            
             @include tablet {
-            @include section-header-tablet;
+            
+            display: flex;
+            flex-flow: row wrap;
+            position: relative;
             }
 
-            @include desktop {
-                @include section-header;
-            }
-        }
+            &--header-container {
+
+                @include tablet {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: baseline;
+                    width: 100%;
+                }
+                
+                &--header{
+                    @include section-header;
+                
+                    @include tablet {
+                        @include section-header-tablet;
+                        padding-top: 0;
+                        width: 33%;
+                    }
+
+                    @include desktop {
+                        @include section-header;
+                    }
+                }
 
             &--social-icons {
                 padding: 16px 0;
                 
                 @include tablet {
                     display: flex;
-                    align-self: flex-end;
                     padding: 0;
+                    // flex: 2;
+                    width: 33%;
                 }
 
                 &--img {
@@ -46,24 +60,28 @@
                     height: 2rem;
 
                     @include tablet {
-                        padding: 0 2%;
+                        
                     }
                 }
             }
         }
+    
 
-    &__contact-div {
+    &--contact-div {
         padding-bottom: 10%;
+
+
         @include tablet {
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: space-between;
-        width: 100%;
-        padding: 2rem 0;
-        }
+            display: flex;
+            flex-flow: row wrap;
+            width: 100%;
+            padding: 2rem 0;
+            
+           }
 
         &--contact-info {
             line-height: 150%; 
+            flex: 1;
 
             &--footer-copy{
                 font-weight: 700;
@@ -71,29 +89,37 @@
         }
     }
 
-    &__logo-container {
-
-        &--anchor {
-
-            &--img {
-                @include bandsite-logo;
-            }
-        }
-        
+    &--logo-container {
 
         @include tablet {
             position: absolute;
-            top: 0;
+            top: 2%;
             right: 0;
+            
         }
+        
+        &--anchor {
+
+        }
+        
+        &--img {
+
+            
+        }
+    
     }
 
-    &__rights-reserved {
+    &--rights-reserved {
         padding-top: 3%;
 
         @include tablet {
             padding-top: 0;
+
+            @include tablet {
+                
+            }
         }
     }
 }
 
+}

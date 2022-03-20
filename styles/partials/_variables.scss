@@ -26,7 +26,7 @@ $offWhiteClr: #FAFAFA;
 @mixin section-header-tablet {
     font-family: 'AvenirNext LT Pro-Demi';
     font-size: 5.5vh;
-    padding-top: 2rem;
+    // padding-top: 2rem;
 }
 
 // @mixin section-header-desktop {
@@ -35,10 +35,10 @@ $offWhiteClr: #FAFAFA;
     
 // }
 
-///--------- Bandsite Log
+///--------- Bandsite Logo
 @mixin bandsite-logo {
-    min-width: 35%;
-    min-height: 35%;
+    min-width: 75%;
+    min-height: 75%;
 }
 
 //-------   Paddings
@@ -57,4 +57,5 @@ $offWhiteClr: #FAFAFA;
 @mixin main-padding-tablet {
     padding: 0 9%;
 }
+
 
