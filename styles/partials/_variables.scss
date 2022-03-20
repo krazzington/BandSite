@@ -18,14 +18,14 @@ $offWhiteClr: #FAFAFA;
 
 // section header mixin
 @mixin section-header {
-    font-family: 'AvenirNext LT Pro-Regular';
+    font-family: 'AvenirNext LT Pro-Demi';
     font-size: 4.5vh;
-    padding-top: 3%;
+    padding-top: 4%;
 }
 
 @mixin section-header-tablet {
     font-family: 'AvenirNext LT Pro-Demi';
-    font-size: 3rem;
+    font-size: 5.5vh;
     padding-top: 2rem;
 }
 
@@ -35,6 +35,13 @@ $offWhiteClr: #FAFAFA;
     
 // }
 
+///--------- Bandsite Log
+@mixin bandsite-logo {
+    min-width: 35%;
+    min-height: 35%;
+}
+
+//-------   Paddings
 @mixin section-padding-mobile {
     padding: 3%;
 }
@@ -50,3 +57,4 @@ $offWhiteClr: #FAFAFA;
 @mixin main-padding-tablet {
     padding: 0 9%;
 }
+

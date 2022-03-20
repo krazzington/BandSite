@@ -47,8 +47,8 @@
   }
 }
 .header__logo-container--img {
-  max-width: 120px;
-  max-height: 20px;
+  min-width: 35%;
+  min-height: 35%;
   padding: 5% 0 3%;
 }
 @media only screen and (min-width: 768px) {
@@ -66,6 +66,7 @@
   .header__nav-list {
     padding: 0;
     align-items: center;
+    height: 100%;
   }
 }
 .header__nav-list--nav-bio {
@@ -74,7 +75,10 @@
 }
 @media only screen and (min-width: 768px) {
   .header__nav-list--nav-bio {
-    padding-left: 32px;
+    margin-left: 32px;
+    padding: 0;
+    box-sizing: border-box;
+    align-self: center;
   }
 }
 .header__nav-list--nav-shows {
@@ -83,38 +87,37 @@
 }
 @media only screen and (min-width: 768px) {
   .header__nav-list--nav-shows {
-    padding-left: 32px;
+    margin-left: 32px;
+    padding: 0;
+    box-sizing: border-box;
+    align-self: center;
   }
 }
 .header__nav-list--nav-bio:hover {
   border-bottom: 5px solid #FAFAFA;
-  padding: 0 0 12px;
+  padding: 0 0 24px;
   box-sizing: border-box;
 }
 @media only screen and (min-width: 768px) {
   .header__nav-list--nav-bio:hover {
     font-weight: 600;
     padding-bottom: 24px;
+    align-self: center;
   }
 }
 .header__nav-list--nav-shows:hover {
   border-bottom: 5px solid #FAFAFA;
-  padding: 0 0 12px;
+  padding: 0 0 24px;
   box-sizing: border-box;
 }
 @media only screen and (min-width: 768px) {
   .header__nav-list--nav-shows:hover {
     font-weight: 600;
     padding-bottom: 24px;
+    align-self: center;
   }
 }
 .header__nav-list--link {
   text-decoration: none;
   color: #FFFFFF;
-}
-.header__nav-list--nav-bio:active {
-  border-bottom: 3px solid #FAFAFA;
-}
-.header__nav-list--nav-shows:active {
-  border-bottom: 3px solid #FAFAFA;
 }/*# sourceMappingURL=header.css.map */

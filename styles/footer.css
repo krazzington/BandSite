@@ -32,32 +32,47 @@
     position: relative;
   }
 }
-.footer__header {
-  font-family: "AvenirNext LT Pro-Regular";
+.footer__header-container--header {
+  font-family: "AvenirNext LT Pro-Demi";
   font-size: 4.5vh;
-  padding-top: 3%;
+  padding-top: 4%;
 }
 @media only screen and (min-width: 768px) {
-  .footer__header {
+  .footer__header-container--header {
     font-family: "AvenirNext LT Pro-Demi";
-    font-size: 3rem;
+    font-size: 5.5vh;
     padding-top: 2rem;
   }
 }
 @media only screen and (min-width: 1280px) {
-  .footer__header {
-    font-family: "AvenirNext LT Pro-Regular";
+  .footer__header-container--header {
+    font-family: "AvenirNext LT Pro-Demi";
     font-size: 4.5vh;
-    padding-top: 3%;
+    padding-top: 4%;
   }
 }
-.footer__social-icons {
+.footer__header-container--social-icons {
   padding: 16px 0;
 }
-.footer__social-icons--img {
+@media only screen and (min-width: 768px) {
+  .footer__header-container--social-icons {
+    display: flex;
+    align-self: flex-end;
+    padding: 0;
+  }
+}
+.footer__header-container--social-icons--img {
   padding: 0 1.5rem 0 0;
   width: 2rem;
   height: 2rem;
+}
+@media only screen and (min-width: 768px) {
+  .footer__header-container--social-icons--img {
+    padding: 0 2%;
+  }
+}
+.footer__contact-div {
+  padding-bottom: 10%;
 }
 @media only screen and (min-width: 768px) {
   .footer__contact-div {
@@ -67,6 +82,16 @@
     width: 100%;
     padding: 2rem 0;
   }
+}
+.footer__contact-div--contact-info {
+  line-height: 150%;
+}
+.footer__contact-div--contact-info--footer-copy {
+  font-weight: 700;
+}
+.footer__logo-container--anchor--img {
+  min-width: 35%;
+  min-height: 35%;
 }
 @media only screen and (min-width: 768px) {
   .footer__logo-container {
@@ -82,8 +107,4 @@
   .footer__rights-reserved {
     padding-top: 0;
   }
-}
-
-.footer-copy {
-  font-weight: 700;
 }/*# sourceMappingURL=footer.css.map */

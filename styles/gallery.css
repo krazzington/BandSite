@@ -31,22 +31,22 @@
   }
 }
 .gallery__header {
-  font-family: "AvenirNext LT Pro-Regular";
+  font-family: "AvenirNext LT Pro-Demi";
   font-size: 4.5vh;
-  padding-top: 3%;
+  padding-top: 4%;
 }
 @media only screen and (min-width: 768px) {
   .gallery__header {
     font-family: "AvenirNext LT Pro-Demi";
-    font-size: 3rem;
+    font-size: 5.5vh;
     padding-top: 2rem;
   }
 }
 @media only screen and (min-width: 1280px) {
   .gallery__header {
-    font-family: "AvenirNext LT Pro-Regular";
+    font-family: "AvenirNext LT Pro-Demi";
     font-size: 4.5vh;
-    padding-top: 3%;
+    padding-top: 4%;
   }
 }
 .gallery__images-div {
@@ -60,7 +60,7 @@
   }
 }
 .gallery__images-div--img {
-  padding: 16px 0 16px 0;
+  padding: 16px 0;
   width: 100%;
   height: 40%;
 }
