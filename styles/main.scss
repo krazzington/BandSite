@@ -45,12 +45,11 @@
     }
 
     &__bold-quote {
+        @include flex-column;
         font-size: 90%;
         line-height: 150%;
         font-weight: 700;
-        display: flex;
         height: 14vh;
-        flex-direction: column;
         justify-content: space-between;
         
         @include mid-mobile {
@@ -119,9 +118,7 @@
 
         @include tablet {
             @include main-padding-tablet;
-            display: flex;
-            flex-direction: row;
-            // max-width: 750px;
+            @include flex-row;
             justify-content: space-between;
             
         }

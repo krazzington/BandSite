@@ -41,10 +41,6 @@
         }
     
         &--img {
-            // max-width: 140px;
-            // max-height: 40px;
-            
-            //Do not change above **************
 
             @include tablet{
                 min-height: 20%;
@@ -59,8 +55,7 @@
     
     &__nav-list {
         list-style: none;
-        display: flex;
-        flex-direction: row;
+        @include flex-row;
         height: 2rem;
         //Do not change above **************
         

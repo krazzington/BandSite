@@ -36,6 +36,16 @@ $offWhiteClr: #FAFAFA;
     padding-bottom: 2%;
 }
 
+@mixin flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
 // @mixin section-header-desktop {
 //     font-family: 'AvenirNext LT Pro-Regular';
 //     font-size: 2rem;
