@@ -9,7 +9,7 @@
     color: $whiteTextClr;
 
     @include tablet {
-        padding: 36px;
+        @include section-padding-tablet;
     }
     @include desktop {
         padding-left: 0;
@@ -81,6 +81,7 @@
                 justify-content: flex-end;
                 width: 32%;
                 flex: 1;
+                
                 @include footer-container-spacing-tablet;
             }
             @include desktop {
