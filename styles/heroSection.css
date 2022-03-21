@@ -20,16 +20,22 @@
   font-display: swap;
 }
 .hero {
-  height: 40vh;
+  height: 30vh;
   background-image: url("../assets/images/hero-bio.jpg");
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: bottom;
   color: #FFFFFF;
   position: relative;
 }
 @media only screen and (min-width: 768px) {
   .hero {
-    height: 100vh;
+    height: 80vh;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .hero {
+    height: 80vh;
   }
 }
 .hero__overlay {
@@ -42,7 +48,7 @@
 }
 .hero__band-name {
   font-family: "AvenirNext LT Pro-Demi";
-  font-size: 200%;
+  font-size: 175%;
   padding-top: 4%;
   padding: 4.5%;
   position: absolute;
@@ -50,16 +56,14 @@
 }
 @media only screen and (min-width: 768px) {
   .hero__band-name {
-    font-family: "AvenirNext LT Pro-Demi";
-    font-size: 300%;
-    padding-top: 2%;
+    font-size: 500%;
     padding-left: 4.5%;
-    font-size: 4rem;
   }
 }
 @media only screen and (min-width: 1280px) {
   .hero__band-name {
     padding-left: 0;
     padding: 2% 10%;
+    font-size: 7vh;
   }
 }/*# sourceMappingURL=heroSection.css.map */

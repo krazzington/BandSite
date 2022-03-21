@@ -4,15 +4,20 @@
 
 //hero section
 .hero {
-    height: 40vh;
+    height: 30vh;
     background-image: url("../assets/images/hero-bio.jpg");
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: bottom;
     color: $whiteTextClr;
     position: relative;
 
     @include tablet {
-        height: 100vh;
+        height: 80vh;
+    }
+    @include desktop {
+        height: 80vh;
+        // background-position: ;
     }
     
     &__overlay {
@@ -33,13 +38,13 @@
         
 
         @include tablet {
-            @include section-header-tablet;
+            font-size: 500%;
             padding-left: 4.5%;
-            font-size: 4rem;
         }
         @include desktop {
             padding-left: 0;
             @include section-padding-desktop;
+            font-size: 7vh;
         }
     }
 }

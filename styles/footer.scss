@@ -11,27 +11,25 @@
     @include tablet {
         padding: 36px;
     }
-    @include desktop {      
+    @include desktop {
+        padding-left: 0;
         @include section-padding-desktop;
-        
     }
 
     &__container {
-        
         display: flex;
         flex-direction: column;
         
-
-
+        
         @include tablet {
         display: -webkit-flex;
         display: flex;
         flex-flow: row wrap;
         align-items: center;
+        width: 100%;
         }
 
             &--header{
-
                 @include tablet {
                     @include footer-container-spacing-tablet;
                     flex: 1;
@@ -91,7 +89,6 @@
             }
             
             &--anchor {
-    
             }
             
             &--img {

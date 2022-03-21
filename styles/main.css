@@ -35,13 +35,13 @@
 }
 .main__header {
   font-family: "AvenirNext LT Pro-Demi";
-  font-size: 200%;
+  font-size: 175%;
   padding-top: 4%;
 }
 @media only screen and (min-width: 768px) {
   .main__header {
     font-family: "AvenirNext LT Pro-Demi";
-    font-size: 300%;
+    font-size: 250%;
     padding-top: 2%;
   }
 }
@@ -70,22 +70,29 @@
   }
 }
 .main__bold-quote {
-  font-size: 1.5rem;
+  font-size: 90%;
+  line-height: 150%;
   font-weight: 700;
   display: flex;
-  height: 15rem;
+  height: 14vh;
   flex-direction: column;
   justify-content: space-between;
 }
 @media only screen and (min-width: 412px) {
   .main__bold-quote {
-    height: 9rem;
+    height: 100%;
   }
 }
 @media only screen and (min-width: 768px) {
   .main__bold-quote {
     padding: 0 9%;
-    height: 8.5rem;
+    height: 8rem;
+    font-size: 125%;
+  }
+}
+@media only screen and (min-width: 871px) {
+  .main__bold-quote {
+    height: 6rem;
   }
 }
 @media only screen and (min-width: 1280px) {
@@ -117,7 +124,7 @@
 }
 .main__subheader-div {
   color: #000000;
-  font-size: 110%;
+  font-size: 80%;
   padding-top: 7%;
 }
 @media only screen and (min-width: 412px) {
@@ -131,6 +138,11 @@
     padding-top: 7%;
     font-size: 150%;
     font-weight: 700;
+  }
+}
+@media only screen and (min-width: 871px) {
+  .main__subheader-div {
+    padding-top: 4%;
   }
 }
 @media only screen and (min-width: 1280px) {
@@ -148,7 +160,7 @@
   }
 }
 .main__para-div--regular-paragraph {
-  font-size: 1.3rem;
+  font-size: 80%;
   padding-top: 4%;
 }
 @media only screen and (min-width: 768px) {

@@ -45,20 +45,25 @@
     }
 
     &__bold-quote {
-        font-size: 1.5rem;
+        font-size: 90%;
+        line-height: 150%;
         font-weight: 700;
         display: flex;
-        height: 15rem;
+        height: 14vh;
         flex-direction: column;
         justify-content: space-between;
         
         @include mid-mobile {
-            height: 9rem;
+            height: 100%;
         }
         @include tablet {
             @include main-padding-tablet;
-            height: 8.5rem;
-        } 
+            height: 8rem;
+            font-size: 125%;
+        }
+        @include mid-tablet {
+            height: 6rem;
+        }
         @include desktop {
             height: 6rem;
         }
@@ -88,18 +93,20 @@
 
     &__subheader-div {
         color: $darkBlackClr;
-        font-size: 110%;
+        font-size: 80%;
         padding-top: 7%;
         
         @include mid-mobile {
             padding-top: 10%;
         }
-
         @include tablet {
             @include main-padding-tablet;
             padding-top: 7%;
             font-size: 150%;
             font-weight: 700;
+        }
+        @include mid-tablet {
+            padding-top: 4%;
         }
         @include desktop {
             padding-top: 4%;
@@ -109,6 +116,7 @@
 
     &__para-div {
         
+
         @include tablet {
             @include main-padding-tablet;
             display: flex;
@@ -119,7 +127,7 @@
         }
 
         &--regular-paragraph {
-            font-size: 1.3rem;
+            font-size: 80%;
             padding-top: 4%;
 
             @include tablet {
