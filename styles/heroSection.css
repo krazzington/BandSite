@@ -19,7 +19,7 @@
   font-style: normal;
   font-display: swap;
 }
-.hero {
+.hero, .show-hero {
   height: 30vh;
   background-image: url("../assets/images/hero-bio.jpg");
   background-size: cover;
@@ -29,16 +29,16 @@
   position: relative;
 }
 @media only screen and (min-width: 768px) {
-  .hero {
+  .hero, .show-hero {
     height: 80vh;
   }
 }
 @media only screen and (min-width: 1280px) {
-  .hero {
+  .hero, .show-hero {
     height: 80vh;
   }
 }
-.hero__overlay {
+.hero__overlay, .show-hero__overlay {
   background-color: rgba(50, 50, 50, 0.5);
   position: absolute;
   top: 0;
@@ -46,7 +46,7 @@
   bottom: 0;
   left: 0;
 }
-.hero__band-name {
+.hero__band-name, .show-hero__band-name {
   font-family: "AvenirNext LT Pro-Demi";
   font-size: 175%;
   padding-top: 4%;
@@ -55,15 +55,19 @@
   top: 37.5%;
 }
 @media only screen and (min-width: 768px) {
-  .hero__band-name {
+  .hero__band-name, .show-hero__band-name {
     font-size: 500%;
     padding-left: 4.5%;
   }
 }
 @media only screen and (min-width: 1280px) {
-  .hero__band-name {
+  .hero__band-name, .show-hero__band-name {
     padding-left: 0;
     padding: 2% 10%;
     font-size: 7vh;
   }
+}
+
+.show-hero {
+  background-image: url("../assets/images/Mohan-muruge.jpg");
 }/*# sourceMappingURL=heroSection.css.map */

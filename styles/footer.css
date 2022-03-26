@@ -84,7 +84,7 @@
     display: flex;
     padding: 0;
     width: 33%;
-    flex: 1;
+    flex: 2;
     max-width: 250px;
     min-width: 220px;
   }
@@ -112,7 +112,7 @@
     flex-wrap: wrap;
     justify-content: flex-end;
     width: 32%;
-    flex: 1;
+    flex: 2;
     max-width: 250px;
     min-width: 220px;
   }

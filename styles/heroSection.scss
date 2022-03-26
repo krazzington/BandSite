@@ -2,6 +2,7 @@
 @use './partials/variables' as *;
 @use './partials/mediaQueries' as *;
 
+
 //hero section
 .hero {
     height: 30vh;
@@ -17,7 +18,6 @@
     }
     @include desktop {
         height: 80vh;
-        // background-position: ;
     }
     
     &__overlay {
@@ -49,3 +49,16 @@
     }
 }
 
+.show-hero {
+    @extend .hero;
+    background-image: url("../assets/images/Mohan-muruge.jpg");
+    
+    &__overlay {
+        @extend .hero__overlay;
+    }
+    &__band-name {
+        @extend .hero__band-name;
+
+    }
+    
+}
