@@ -1,6 +1,5 @@
-@use './partials/fonts' as *;
-@use './partials/variables' as *;
-@use './partials/mediaQueries' as *;
+@use './variables' as *;
+@use './mediaQueries' as *;
 
 
 
@@ -70,7 +69,8 @@
 
         &--top {
             @include tablet {
-                font-family: 'AvenirNext LT Pro-Demi';
+                font-family: 'AvenirNext';
+                font-weight: 600;
                 font-size: 110%;
                 
             }

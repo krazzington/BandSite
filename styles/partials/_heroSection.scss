@@ -1,6 +1,5 @@
-@use './partials/fonts' as *;
-@use './partials/variables' as *;
-@use './partials/mediaQueries' as *;
+@use './variables' as *;
+@use './mediaQueries' as *;
 
 
 //hero section
@@ -51,14 +50,16 @@
 
 .show-hero {
     @extend .hero;
-    background-image: url("../assets/images/Mohan-muruge.jpg");
-    
-    &__overlay {
-        @extend .hero__overlay;
-    }
-    &__band-name {
-        @extend .hero__band-name;
+        background-image: url("../assets/images/hero-shows.jpg");
+        background-position: top;
+        
+        &__overlay {
+            @extend .hero__overlay;
+        }
+        
+        &__band-name {
+            @extend .hero__band-name;
 
-    }
+        }
     
 }

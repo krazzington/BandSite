@@ -1,6 +1,5 @@
-@use './partials/fonts' as *;
-@use './partials/variables' as *;
-@use './partials/mediaQueries' as *;
+@use './variables' as *;
+@use './mediaQueries' as *;
 
 //gallery secction
 .gallery {
