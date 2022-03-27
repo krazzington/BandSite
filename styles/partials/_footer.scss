@@ -64,6 +64,7 @@
 
                     @include tablet {
                        justify-content: center;
+                       
                     }
                 }
             }
@@ -91,10 +92,11 @@
             }
             
             &--img {
-                
+                flex-grow: 4;
                 
                 @include tablet {
                     @include section-header-tablet;
+                    
                 }
             }
         }

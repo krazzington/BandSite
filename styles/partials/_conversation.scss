@@ -1,0 +1,29 @@
+@use './variables' as *;
+@use './mediaQueries' as *;
+
+//join the conversation section
+.conversation {
+    @include section-padding-mobile;
+    color: $blackBg;
+    
+
+    @include tablet {
+        @include section-padding-tablet;
+    }
+    @include desktop {
+        @include section-padding-desktop;
+    }
+
+    &__header {
+        @include section-header;
+        
+        @include tablet {
+            @include section-header-tablet;
+        }
+
+        @include desktop {
+            @include section-header-desktop;
+        
+        }
+    }
+}
