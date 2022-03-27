@@ -28,6 +28,7 @@
         }
 
             &--header{
+
                 @include tablet {
                     @include footer-container-spacing-tablet;
                     flex: 1;
@@ -71,6 +72,7 @@
         
         &--logo-container {
             -webkit-order: 3;
+
             @include bandsite-logo-mobile;
             
             @include tablet {
@@ -92,7 +94,7 @@
             }
             
             &--img {
-                flex-grow: 4;
+                
                 
                 @include tablet {
                     @include section-header-tablet;
