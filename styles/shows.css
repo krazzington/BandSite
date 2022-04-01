@@ -582,6 +582,47 @@
   }
 }
 
+.shows {
+  padding: 4.5%;
+  color: #323232;
+}
+@media only screen and (min-width: 768px) {
+  .shows {
+    padding: 4.5%;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .shows {
+    padding: 2% 10%;
+  }
+}
+.shows__header {
+  font-family: "AvenirNext";
+  font-weight: 600;
+  font-size: 175%;
+  padding-top: 4%;
+}
+@media only screen and (min-width: 768px) {
+  .shows__header {
+    font-family: "AvenirNext";
+    font-weight: 600;
+    font-size: 250%;
+    padding-top: 2%;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .shows__header {
+    font-family: "AvenirNext";
+    font-weight: 600;
+    font-size: 200%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+  }
+}
+.shows__showsTable--header {
+  color: #E1E1E1;
+}
+
 * {
   font-family: "AvenirNext LT Pro-Regular", serif;
   margin: 0;
