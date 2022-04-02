@@ -92,5 +92,19 @@ min-width: 220px;
 
 //--------- Shows padding
 @mixin showDiv-spacing-tablet {
-    
+
+}
+
+//---------- buttons
+@mixin button-mobile {
+    font-family: 'AvenirNext';
+    font-weight: 700;
+    background-color: $blackBg;
+    text-transform: uppercase;
+    color: $whiteTextClr;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    margin: 16px 0;
 }

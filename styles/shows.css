@@ -660,14 +660,14 @@
   font-weight: 700;
   background-color: #323232;
   text-transform: uppercase;
-  width: 98%;
-  height: 40px;
   color: #FFFFFF;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 15px;
   margin: 16px 0;
+  width: 98%;
+  height: 40px;
 }
 @media only screen and (min-width: 768px) {
   .shows__ticketButtonDiv {

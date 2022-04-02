@@ -5,6 +5,9 @@
 // You must use an HTML Form with the following functionality:
 // That submits using the addEventListener
 // Prevents the page from reloading when submitting a new comment
+
+
+
 // Constructs a new comment object
 // Pushes a new comment object to an array of comments
 // Clears all comments from the page
@@ -12,92 +15,137 @@
 // Clears the input fields after submitting a new comment
 
 
-//FORM SECTION
-const createConversationSection = (() => {
+//FORM SECTION JS - CAN BE HTML
+// const createConversationSection = (() => {
 
-const commentFormSection = document.createElement( 'div' );
-commentFormSection.classList.add( 'conversation__formsSection' );
+// const commentFormSection = document.createElement( 'div' );
+// commentFormSection.classList.add( 'conversation__formsSection' );
+// commentFormSection.setAttribute( '#commentForm' )
 
-const displayPic = document.createElement( 'div' ); //This appends to commentFormSection
-displayPic.classList.add = ( 'conversation__formsSection--displayPic');
+// const displayPic = document.createElement( 'div' ); //This appends to commentFormSection
+// displayPic.classList.add = ( 'conversation__formsSection--displayPic');
 
-const nameDiv = document.createElement( 'div' ); //This appends to commentFormSection
-nameDiv.classList.add = ( 'conversation__nameDiv' );
+// const nameDiv = document.createElement( 'div' ); //This appends to commentFormSection
+// nameDiv.classList.add = ( 'conversation__nameDiv' );
 
-const nameDivHeader = document.createElement( 'div' );//This appends to nameDiv
-nameDivHeader.classList.add = ( 'conversation__commentDiv--header' );
-const nameDivForm = document.createElement( 'form' );//This appends to nameDiv
-nameDivForm.classList.add = ( 'conversation__commentDiv--nameForm' );
+// const nameDivHeader = document.createElement( 'div' );//This appends to nameDiv
+// nameDivHeader.classList.add = ( 'conversation__commentDiv--header' );
+// const nameDivForm = document.createElement( 'form' );//This appends to nameDiv
+// nameDivForm.classList.add = ( 'conversation__commentDiv--nameForm' );
 
-nameDiv.appendChild( nameDivHeader );
-nameDiv.appendChild( nameDivForm );
+// nameDiv.appendChild( nameDivHeader );
+// nameDiv.appendChild( nameDivForm );
 
-const commentDiv = document.createElement( 'div' ); //This appends to commentFormSection
-commentDiv.classList.add = ( 'conversation__commentDiv' );
+// const commentDiv = document.createElement( 'div' ); //This appends to commentFormSection
+// commentDiv.classList.add = ( 'conversation__commentDiv' );
 
-const commentDivHeader = document.createElement( 'div' );//This appends to the commentDiv
-commentDivHeader.classList.add = ( 'conversation__commentDiv--header' );
-const commentDivForm = document.createElement( 'form' );//This appends to the commentDiv
-commentDivForm.classList.add = ( 'conversation__commentDiv--commentForm' );
+// const commentDivHeader = document.createElement( 'div' );//This appends to the commentDiv
+// commentDivHeader.classList.add = ( 'conversation__commentDiv--header' );
+// const commentDivForm = document.createElement( 'form' );//This appends to the commentDiv
+// commentDivForm.classList.add = ( 'conversation__commentDiv--commentForm' );
 
-commentDiv.appendChild( commentDivHeader );
-commentDiv.appendChild( commentDivForm );
+// commentDiv.appendChild( commentDivHeader );
+// commentDiv.appendChild( commentDivForm );
 
-commentFormSection.appendChild( displayPic );
-commentFormSection.appendChild( nameDiv );
-commentFormSection.appendChild( commentDiv );
+// commentFormSection.appendChild( displayPic );
+// commentFormSection.appendChild( nameDiv );
+// commentFormSection.appendChild( commentDiv );
 
-const commentButton = document.creatElement( 'div' ); //This appends to commentFormSection
-commentButton.classList.add = ( 'conversation__commentButton' );
-commentButton.innerText = 'comment';
+// const commentButton = document.creatElement( 'div' ); //This appends to commentFormSection
+// commentButton.classList.add = ( 'conversation__commentButton' );
+// commentButton.innerText = 'comment';
 
-commentFormSection.appendChild( commentButton );
-})
+// commentFormSection.appendChild( commentButton );
+//})
 
+//createConversationSection();
 
-const commentSection = document.createElement( 'div' );
-commentSection.classList.add = ( 'conversation__commentSection' );
-commentSection.setAttribute( '#comments-list' );
-commentSection.appendChild( drawComments );
+//must have a function called displayComment() that takes in one comment object as a parameter and displays it on the page using JavaScript DOM manipulation.
 
 
-let comments = [
+
+//BUTTON CLICK
+//event.preventDefault()
+
+//
+// const commentSection = document.createElement( 'ul' );
+// commentSection.classList.add = ( 'conversation__commentSection' );
+// commentSection.setAttribute( '#comments-list' );
+// commentSection.appendChild( drawComments );
+const formSection = document.getElementById( 'formsSection' );
+
+let printComments = [
     {
-        name: 'Joe',
-        comment: 'Love this band, moar music!'
+        name: 'Connor Walton',
+        date: '02/17/2021',
+        comment: 'his is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains.'
     },
     {
-        name: 'Trolly McBad',
-        comment: 'I hate this band!'
+        name: 'Emilie Beach',
+        date: '01/09/2021',
+        comment: 'I feel blessed to have seen them in person. What a show! They were just perfection. If there was one day of my life I could relive, this would be it. What an incredible day.'
     },
     {
-        name: 'Bubba',
-        comment: 'lorem ipsum'
+        name: 'Miles Acosta',
+        date: '12/20/2020',
+        comment: 'I can t stop listening. Every time I hear one of their songs the vocals it gives me goosebumps. Shivers straight down my spine. What a beautiful expression of creativity. Can t get enough. I sure hope 2021 is an improvement on 2020.'
     }
 ];
+const displayComment = ( commentObject ) => {
+    let listItem = document.createElement( 'li' );
+        
+    let nameNode = document.createElement( 'span' );
+    let dateNode = document.createElement( 'span' );
+    let commentNode = document.createElement( 'span' );
 
+    nameNode.innerText = commentObject.name;
+    dateNode.innerText = commentObject.date;
+    commentNode.innerText = commentObject.comment;
+
+    listItem.appendChild( nameNode );
+    listItem.appendChild( dateNode );
+    listItem.appendChild( commentNode );
+
+    //unorderedList.appendChild(listItem);
+    return listItem;
+}
 //Main renderer
-let drawComments = () => {
+let commentRender = ( comments ) => {
 
     //Comment list
-    let unorderedList = document.querySelector('#comments-list'); 
+    let unorderedList = document.querySelector( '#comments-list' ); 
 
     for (let i = 0; i < comments.length; i++) {
-        let commentObject = comments[i];
-        let listItem = document.createElement('li');
         
-        let nameNode = document.createElement('span');
-        let commentNode = document.createElement('span');
-
-        nameNode.innerText = commentObject.name;
-        commentNode.innerText = commentObject.comment;
-
-        listItem.appendChild(nameNode);
-        listItem.appendChild(commentNode);
-
-        unorderedList.appendChild(listItem);
-        console.log(unorderedList);
+        let commentObject = comments[i];
+        unorderedList.appendChild( displayComment( commentObject ) );
+        
     }
 }
 
-drawComments();
+const addComment = ( event ) => {
+    event.preventDefault();
+
+    let nameForm = document.getElementById( 'name-input' );
+    let commentForm = document.getElementById( 'comment-input' );
+    let todaysDate = new Date();
+
+    let name = nameForm.value;
+    nameForm.value = '';
+
+    let comment = commentForm.value;
+    commentForm.value = '';
+
+    const commentObject = {
+        name: name,
+        date: todaysDate,
+        comment: comment,
+    }
+    printComments.unshift( commentObject );
+    commentRender ( printComments );
+    
+}
+
+commentRender ( printComments );
+
+formSection.addEventListener('submit', addComment)

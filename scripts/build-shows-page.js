@@ -89,7 +89,6 @@ const showIntoTheRow = ( gigArray ) => {
     gigArray.forEach( ( gig ) => {
         const createShowDiv = document.createElement( 'div' );
         createShowDiv.classList.add( 'shows__showDiv' );
-
         createShowDiv.appendChild( showDivGenerator( gig ) );
         showDestination.appendChild( createShowDiv );
     } );
