@@ -1,5 +1,4 @@
-//The individual rows of the Shows table need to have a hover state applied to them when a cursor is hovering over the table row, as per style guide. This can be done by utilizing a pseudo class within your Sass.
-//Additionally, clicking on an individual row should make that row "selected" or "active", applying a modifier CSS class via JavaScript. Utilize your knowledge of both JavaScript and Sass to accomplish this.
+
 
 // const ticketbutton = document.createElement( 'div' );
 // ticketbutton.classList.add('show__showRow--ticketbutton')
@@ -389,10 +388,17 @@
 
 // // console.log(bigDifference(1000, 7))
 
+
+// The individual rows of the Shows table need to have a hover state applied to them when a cursor is hovering over the table 
+// row, as per style guide. This can be done by utilizing a pseudo class within your Sass.
+// Additionally, clicking on an individual row should make that row "selected" or "active", applying a modifier
+// CSS class via JavaScript. Utilize your knowledge of both JavaScript and Sass to accomplish this.
+
+
 const ticketbutton = document.createElement( 'div' );
 ticketbutton.classList.add('shows__showRow--ticketbutton')
 
-let gigDetails = [
+const gigDetails = [
     { Date : 'Mon Sept 06 2021', Venue : 'Ronald Lane', Location : 'San Francisco, CA', TicketText : ticketbutton },
     { Date : 'Tue Sept 21 2021', Venue : 'Pier 3 East', Location : 'San Francisco, CA', TicketText : ticketbutton },
     { Date : 'Fri Oct 15 2021', Venue : 'View Lounge', Location : 'San Francisco, CA', TicketText : ticketbutton },
@@ -408,6 +414,7 @@ const showDivGenerator = ( showRows ) => {
     const newShow = document.createElement( 'div' ); //show div
     newShow.classList.add( 'shows__showDiv' );
 
+    //DATE DIVS
     const dateDiv = document.createElement( 'div' ); // date div in the show div --- this should own the header and date info
     dateDiv.classList.add( 'shows__dateDiv' ); // this adds the class to the date info
     const dateHeaderDiv = document.createElement( 'div' );
@@ -418,18 +425,43 @@ const showDivGenerator = ( showRows ) => {
     dateInfoDiv.classList.add( 'shows__dateDiv--dateInfo' );
     dateDiv.appendChild( dateHeaderDiv );
     dateDiv.appendChild( dateInfoDiv );
+    
+    //VENUE DIVS
+    const venueDiv = document.createElement( 'div' ); // date div in the show div --- this should own the header and date info
+    venueDiv.classList.add( 'shows__dateDiv' ); // this adds the class to the date info
+    const venueHeaderDiv = document.createElement( 'div' );
+    venueHeaderDiv.classList.add( 'shows__venueDiv--headers' );
+    venueHeaderDiv.innerText = 'venue';
+    const venueInfoDiv = document.createElement( 'div' );
+    venueInfoDiv.innerText = showRows.Venue;
+    venueInfoDiv.classList.add( 'shows__venueDiv--venueInfo' );
+    venueDiv.appendChild( venueHeaderDiv );
+    venueDiv.appendChild( venueInfoDiv );
 
-    // const emojiTitle = document.createElement( 'h2' );
-    // emojiTitle.innerText = emojiBlock.emojiTitle;
-    // emojiTitle.classList.add( 'emoji-card__emoji-title' );
-    // newCard.appendChild( emojiTitle );
+    //LOCATION DIVS
+    const locationDiv = document.createElement( 'div' ); // date div in the show div --- this should own the header and date info
+    locationDiv.classList.add( 'shows__locationDiv' ); // this adds the class to the date info
+    const locationHeaderDiv = document.createElement( 'div' );
+    locationHeaderDiv.classList.add( 'shows__locationDiv--headers' );
+    locationHeaderDiv.innerText = 'location';
+    const locationInfoDiv = document.createElement( 'div' );
+    locationInfoDiv.innerText = showRows.Location;
+    locationInfoDiv.classList.add( 'shows__locationDiv--locationInfo' );
+    locationDiv.appendChild( locationHeaderDiv );
+    locationDiv.appendChild( locationInfoDiv );
 
-    // const emojiDescription = document.createElement( 'p' );
-    // emojiDescription.innerText = emojiBlock.emojiDescription;
-    // emojiDescription.classList.add( 'emoji-card__emoji-description' );
-    // newCard.appendChild( emojiDescription );
+    const ticketButtonDiv = document.createElement( 'div' );
+    ticketButtonDiv.classList.add( 'shows__ticketButtonDiv' );
+    locationInfoDiv.innerText = 'buy tickets';
 
+    //appends to the newShow Div
+    newShow.appendChild( dateDiv ); 
+    newShow.appendChild( venueDiv );
+    newShow.appendChild( locationDiv );
+
+    
     return newShow;
+    
 };
 
 //Main renderer
@@ -437,15 +469,17 @@ const showIntoTheRow = ( gigArray ) => {
 
     //Target node
     const showDestination = document.querySelector( '#showTable' );
-
-    const createShowDiv = document.createElement( 'div' );
+    
+    
+    gigArray.forEach( ( gig ) => {
+        const createShowDiv = document.createElement( 'div' );
         createShowDiv.classList.add( 'shows__showDiv' );
 
-    gigArray.forEach( ( gig ) => {
         createShowDiv.appendChild( showDivGenerator( gig ) );
+        showDestination.appendChild( createShowDiv );
     } );
 
-    showDestination.appendChild( createShowDiv );
+    // showDestination.appendChild( createShowDiv );
 };
 
 //Invoking my renderer

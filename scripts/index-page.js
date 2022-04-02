@@ -20,13 +20,27 @@ displayPic.classList.add = ( 'conversation__formsSection--displayPic');
 const nameDiv = document.createElement( 'div' ); //This appends to commentSection
 nameDiv.classList.add = ( 'conversation__nameDiv' );
 const nameDivHeader = document.createElement( 'div' );//This appends to nameDiv
-// *************FORM goes here
+nameDivHeader.classList.add = ( 'conversation__commentDiv--header' );
+const nameDivForm = document.createElement( 'form' );//This appends to nameDiv
+nameDivHeader.classList.add = ( 'conversation__commentDiv--commentForm' );
+
+nameDiv.appendChild( nameDiv );
+nameDivForm.appendChild( nameDiv );
 
 const commentDiv = document.createElement( 'div' ); //This appends to commentSection
 commentDiv.classList.add = ( 'conversation__commentDiv' );
-const commentDivHeader = document.createElement( 'div' );
-// *************FORM goes here
+const commentDivHeader = document.createElement( 'div' );//This appends to the commentDiv
+commentDivHeader.classList.add = ( 'conversation__commentDiv--header' );
+const commentDivForm = document.createElement( 'form' );//This appends to the commentDiv
+commentDivForm.classList.add = ( 'conversation__commentDiv--commentForm' );
+
+commentDiv.appendChild( commentDiv );
+commentDivForm.appendChild( commentDiv );
+
 
 const commentButton = document.creatElement( 'div' ); //This appends to commentSection
-commentButton.innerText = document.createElement( 'div' );
+commentButton.classList.add = ( 'conversation__commentButton' );
+commentButton.innerText = 'comment';
+
+commentSection.appendChild( commentButton );
 
