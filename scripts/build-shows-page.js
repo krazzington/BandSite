@@ -61,7 +61,6 @@ const showDivGenerator = ( showRows ) => {
 
     const ticketButtonDiv = document.createElement( 'div' );
     ticketButtonDiv.classList.add( 'shows__ticketButtonDiv' );
-
     const ticketButtonHeaderDiv = document.createElement( 'div' );
     ticketButtonHeaderDiv.classList.add( 'shows__divHeaders' );
     ticketButtonHeaderDiv.innerText = '';
@@ -95,7 +94,6 @@ const showIntoTheRow = ( gigArray ) => {
         showDestination.appendChild( createShowDiv );
     } );
 
-    // showDestination.appendChild( createShowDiv );
 };
 
 //Invoking my renderer
