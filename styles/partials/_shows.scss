@@ -27,14 +27,80 @@
         }
     }
 
-    &__showsTable {
+    &__showDiv {
+        border-bottom: 1px solid #E1E1E1;
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 2%;
 
+        @include tablet {
+            flex-direction: row;
+            width: 100%;
+            align-items: baseline;
+        }
+    }
 
-        &__header {
-            color: $mercuryClr;
+    &__divHeaders {
+        color: $mercuryClr;
+        text-transform: uppercase;
+        padding: 16px 0;
+    }
+
+    &__divHeaders:nth-child(1) {
+        font-style: bolder;
+    }
+
+    &__dateDiv{
+
+        @include tablet {        
+            flex:1;
+        }
+        
+        &--dateInfo{
+
+        }
+    }
+
+    &__venueDiv{
+        
+        @include tablet {        
+            flex:1;
         }
 
+        &--venueInfo{
 
+        }
+    }
+
+    &__locationDiv{
+        
+        @include tablet {        
+            flex:1;
+        }
+
+        &--locationInfo{
+            
+        }
+    }
+
+    &__ticketButtonDiv {
+        font-family: 'AvenirNext';
+        font-weight: 700;
+        background-color: $blackBg;
+        text-transform: uppercase;
+        width: 98%;
+        height: 40px;
+        color: $whiteTextClr;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 15px;
+        margin: 16px 0;
+
+        @include tablet {
+            min-width: 150px;
+            flex:1;
+        }
     }
     
 }

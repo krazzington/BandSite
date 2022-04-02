@@ -11,6 +11,8 @@
 // Re-renders to the page all comments from the comment array
 // Clears the input fields after submitting a new comment
 
+const createConversationSection = (() => {
+
 const commentSection = document.createElement( 'div' );
 commentSection.classList.add( 'conversation__formsSection' );
 
@@ -19,24 +21,29 @@ displayPic.classList.add = ( 'conversation__formsSection--displayPic');
 
 const nameDiv = document.createElement( 'div' ); //This appends to commentSection
 nameDiv.classList.add = ( 'conversation__nameDiv' );
+
 const nameDivHeader = document.createElement( 'div' );//This appends to nameDiv
 nameDivHeader.classList.add = ( 'conversation__commentDiv--header' );
 const nameDivForm = document.createElement( 'form' );//This appends to nameDiv
-nameDivHeader.classList.add = ( 'conversation__commentDiv--commentForm' );
+nameDivForm.classList.add = ( 'conversation__commentDiv--nameForm' );
 
-nameDiv.appendChild( nameDiv );
-nameDivForm.appendChild( nameDiv );
+nameDiv.appendChild( nameDivHeader );
+nameDiv.appendChild( nameDivForm );
 
 const commentDiv = document.createElement( 'div' ); //This appends to commentSection
 commentDiv.classList.add = ( 'conversation__commentDiv' );
+
 const commentDivHeader = document.createElement( 'div' );//This appends to the commentDiv
 commentDivHeader.classList.add = ( 'conversation__commentDiv--header' );
 const commentDivForm = document.createElement( 'form' );//This appends to the commentDiv
 commentDivForm.classList.add = ( 'conversation__commentDiv--commentForm' );
 
-commentDiv.appendChild( commentDiv );
-commentDivForm.appendChild( commentDiv );
+commentDiv.appendChild( commentDivHeader );
+commentDiv.appendChild( commentDivForm );
 
+commentSection.appendChild( displayPic );
+commentSection.appendChild( nameDiv );
+commentSection.appendChild( commentDiv );
 
 const commentButton = document.creatElement( 'div' ); //This appends to commentSection
 commentButton.classList.add = ( 'conversation__commentButton' );
@@ -44,3 +51,42 @@ commentButton.innerText = 'comment';
 
 commentSection.appendChild( commentButton );
 
+
+})
+
+let comments = [
+    {
+        name: 'Joe',
+        comment: 'Love this band, moar music!'
+    },
+    {
+        name: 'Trolly McBad',
+        comment: 'I hate this band!'
+    },
+    {
+        name: 'Bubba',
+        comment: 'lorem ipsum'
+    }
+];
+
+let drawComments = () => {
+    let unorderedList = document.querySelector('#comments-list'); 
+
+    for (let i = 0; i < comments.length; i++) {
+        let commentObject = comments[i];
+        let listItem = document.createElement('li');
+
+        let nameNode = document.createElement('span');
+        let commentNode = document.createElement('span');
+
+        nameNode.innerText = commentObject.name;
+        commentNode.innerText = commentObject.comment;
+
+        listItem.appendChild(nameNode);
+        listItem.appendChild(commentNode);
+
+        unorderedList.appendChild(listItem);
+    }
+}
+
+drawComments();
