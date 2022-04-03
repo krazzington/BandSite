@@ -32,8 +32,6 @@
         flex-direction: column;
         text-transform: uppercase;
 
-        
-
         &--header{
             text-transform: uppercase;
             color: $mercuryClr;
@@ -49,6 +47,10 @@
         }
     }
 
+    &__commentSection {
+        list-style: none;
+    }
+
     &__displayPicDiv {
         display: flex;
         flex-direction: column;
@@ -60,8 +62,8 @@
             
 
             @include tablet{
-            max-height: 48px;
-            max-width: 48px; 
+                max-height: 48px;
+                max-width: 48px; 
             
             }
         }

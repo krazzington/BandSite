@@ -5,6 +5,7 @@
 //hero section
 .hero {
     height: 30vh;
+    min-height: 30vh;
     background-image: url("../assets/images/hero-bio.jpg");
     background-size: cover;
     background-repeat: no-repeat;
@@ -55,11 +56,20 @@
         
         &__overlay {
             @extend .hero__overlay;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            
+            &--band-name {
+                @extend .hero__band-name;
+    
+            }
+            
+            &--iframe {
+                width: 50%;
+            }
         }
         
-        &__band-name {
-            @extend .hero__band-name;
-
-        }
+        
     
 }

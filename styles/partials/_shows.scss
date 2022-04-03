@@ -1,6 +1,8 @@
 @use './variables' as *;
 @use './mediaQueries' as *;
 
+
+
 //shows section
 .shows {
     @include section-padding-mobile;
@@ -37,6 +39,7 @@
             flex-direction: row;
             width: 100%;
             align-items: baseline;
+            padding-bottom: 0;
         }
     }
 
@@ -44,10 +47,18 @@
         color: $mercuryClr;
         text-transform: uppercase;
         padding: 16px 0;
+
+        @include tablet {
+            display: none;
+        
+        }
     }
 
-    &__divHeaders:nth-child(1) {
-        font-style: bolder;
+    &__divHeaders:first-child {
+        
+        @include tablet {
+            display: none;
+        }
     }
 
     &__dateDiv{
@@ -57,7 +68,7 @@
         }
         
         &--dateInfo{
-
+            font-style: bolder;
         }
     }
 
@@ -87,7 +98,7 @@
         @include button-mobile;
         width: 98%;
         height: 40px;
-        
+        max-width: 250px;
         
         
 

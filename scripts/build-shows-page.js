@@ -59,6 +59,7 @@ const showDivGenerator = ( showRows ) => {
     locationDiv.appendChild( locationHeaderDiv );
     locationDiv.appendChild( locationInfoDiv );
 
+    //TICKET BUTTON
     const ticketButtonDiv = document.createElement( 'div' );
     ticketButtonDiv.classList.add( 'shows__ticketButtonDiv' );
     const ticketButtonHeaderDiv = document.createElement( 'div' );
@@ -85,10 +86,8 @@ const showIntoTheRow = ( gigArray ) => {
     //Target node
     const showDestination = document.querySelector( '#showTable' );
     
-    
     gigArray.forEach( ( gig ) => {
         const createShowDiv = document.createElement( 'div' );
-        createShowDiv.classList.add( 'shows__showDiv' );
         createShowDiv.appendChild( showDivGenerator( gig ) );
         showDestination.appendChild( createShowDiv );
     } );
@@ -97,3 +96,10 @@ const showIntoTheRow = ( gigArray ) => {
 
 //Invoking my renderer
 showIntoTheRow( gigDetails );
+
+//querySelector(row);
+//addEventListener(click ,function)
+//onclick, add class
+//if()
+
+//the function needs to add a class

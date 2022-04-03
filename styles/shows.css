@@ -153,6 +153,7 @@
 
 .hero, .show-hero {
   height: 30vh;
+  min-height: 30vh;
   background-image: url("../assets/images/hero-bio.jpg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -178,7 +179,7 @@
   bottom: 0;
   left: 0;
 }
-.hero__band-name, .show-hero__band-name {
+.hero__band-name, .show-hero__overlay--band-name {
   font-family: "AvenirNext";
   font-weight: 600;
   font-size: 175%;
@@ -188,13 +189,13 @@
   top: 37.5%;
 }
 @media only screen and (min-width: 768px) {
-  .hero__band-name, .show-hero__band-name {
+  .hero__band-name, .show-hero__overlay--band-name {
     font-size: 500%;
     padding-left: 4.5%;
   }
 }
 @media only screen and (min-width: 1280px) {
-  .hero__band-name, .show-hero__band-name {
+  .hero__band-name, .show-hero__overlay--band-name {
     padding-left: 0;
     padding: 2% 10%;
     font-size: 7vh;
@@ -205,6 +206,15 @@
   background-image: url("../assets/images/hero-shows.jpg");
   background-position: top;
 }
+.show-hero__overlay {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.show-hero__overlay--iframe {
+  width: 50%;
+}
+
 .main {
   padding: 4.5%;
   color: #323232;
@@ -630,6 +640,7 @@
     flex-direction: row;
     width: 100%;
     align-items: baseline;
+    padding-bottom: 0;
   }
 }
 .shows__divHeaders {
@@ -637,13 +648,23 @@
   text-transform: uppercase;
   padding: 16px 0;
 }
-.shows__divHeaders:nth-child(1) {
-  font-style: bolder;
+@media only screen and (min-width: 768px) {
+  .shows__divHeaders {
+    display: none;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .shows__divHeaders:first-child {
+    display: none;
+  }
 }
 @media only screen and (min-width: 768px) {
   .shows__dateDiv {
     flex: 1;
   }
+}
+.shows__dateDiv--dateInfo {
+  font-style: bolder;
 }
 @media only screen and (min-width: 768px) {
   .shows__venueDiv {
@@ -668,6 +689,7 @@
   margin: 16px 0;
   width: 98%;
   height: 40px;
+  max-width: 250px;
 }
 @media only screen and (min-width: 768px) {
   .shows__ticketButtonDiv {
