@@ -12,21 +12,6 @@
 // Clears the input fields after submitting a new comment
 
 
-//FORM SECTION JS - CAN BE HTML
-
-
-//must have a function called displayComment() that takes in one comment object as a parameter and displays it on the page using JavaScript DOM manipulation.
-
-
-
-//BUTTON CLICK
-//event.preventDefault()
-
-//
-// const commentSection = document.createElement( 'ul' );
-// commentSection.classList.add = ( 'conversation__commentSection' );
-// commentSection.setAttribute( '#comments-list' );
-// commentSection.appendChild( drawComments );
 const formsSection = document.getElementById( 'formsSection' );
 
 const printComments = [
@@ -34,7 +19,7 @@ const printComments = [
         pic: '',//This is part of the test
         name: 'Connor Walton',
         date: '02/17/2021',
-        comment: 'his is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains.'
+        comment: 'This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains.'
     },
     {
         pic: '',//This is part of the test
@@ -52,13 +37,16 @@ const printComments = [
 
 const displayComment = ( commentObject ) => {
     let listItem = document.createElement( 'div' );
+    listItem.classList.add( 'postedCommentSection' );
     
     let imageNode = document.createElement( 'span' ); //This is a test    -------   must be img tag
-    imageNode.classList.add( "commentDisplayPic" ); //This is part of the test
-    let nameNode = document.createElement( 'span' );
-    let dateNode = document.createElement( 'span' );
-    let commentNode = document.createElement( 'span' );
-    
+    imageNode.classList.add( 'postedCommentSection__imageNodeSpan' )
+    let nameNode = document.createElement( 'div' );
+    nameNode.classList.add( 'postedCommentSection__mainNode--nameNode' )
+    let dateNode = document.createElement( 'div' );
+    dateNode.classList.add( 'postedCommentSection__mainNode--dateNode' )
+    let commentNode = document.createElement( 'div' );
+    commentNode.classList.add( 'postedCommentSection__mainNode--commentNode' )
 
     imageNode.innerText = commentObject.pic; //This is part of the test 
     nameNode.innerText = commentObject.name;
@@ -78,14 +66,14 @@ let commentRender = ( comments ) => {
 
     //Comment list
     let unorderedList = document.querySelector( '#comments-list' ); 
-    // let divs = unorderedList.getElementsByTagName("div");
-    //     if(divs != null)
-    //     {
-    //         for(let v = divs.length - 1; v >= 0; v--)
-    //         {
-    //             parent.removeChild(divs[0]);
-    //         }
-    //     }​
+                                // let divs = unorderedList.getElementsByTagName("div");
+                                //     if(divs != null)
+                                //     {
+       //Left in for sprint 3   //         for(let v = divs.length - 1; v >= 0; v--)
+                                //         {
+                                //             parent.removeChild(divs[0]);
+                                //         }
+                                //     }​
     for (let i = 0; i < comments.length; i++) {
         
         let commentObject = comments[i];
@@ -117,7 +105,7 @@ const addComment = ( event ) => {
         comment: comment,
     }
 
-    commentObject.classList.add()
+    commentObject.classList.add();
 
     printComments.unshift( commentObject );
     commentRender ( printComments );

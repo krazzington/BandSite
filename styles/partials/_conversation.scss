@@ -27,50 +27,37 @@
         }
     }
 
-    &__formsSection {
-        display: flex;
-        flex-direction: column;
-        text-transform: uppercase;
+}
 
+.formsSection {
+    display: flex;
+    flex-direction: row;
+    text-transform: uppercase;
+    
+    &__forms{
+        flex-direction: column;
+    }
         &--header{
             text-transform: uppercase;
             color: $mercuryClr;
-        }
-        
-        &--nameField {
-
-        }
-
-        &--nameField:required{
-
         }
 
         &--commentField{
             min-height: 90px;
             overflow: scroll;
             display: flex;
-            
         }
-
-        &--commentField:required {
-            
-        }
-
+        
         &--button {
             @include button-mobile;
         }
-    }
-
-    &__commentSection {
-        list-style: none;
-    }
-
+    
     &__displayPicDiv {
         display: flex;
         flex-direction: column;
         
         &--displayPic{
-            border-radius: 50%;
+            border-radius: 50px;
             max-height: 36px;
             max-width: 36px;
             
@@ -80,6 +67,37 @@
                 max-width: 48px; 
             
             }
+        }
+    }
+}
+
+.postedCommentSection {
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1px solid $mercuryClr;
+    position: relative;
+    padding: 16px 0;
+
+    &__imageNodeSpan {
+        background-color: grey;
+        width: 20%;
+    }
+
+    &__mainNode{
+        display: flex;
+        flex-direction: column;
+
+        &--nameNode{
+            font-weight: 600;
+            
+        }
+        &--dateNode{
+            color: $silverClr;
+            position: absolute;
+            right:0;
+        }
+        &--commentNode{
+            
         }
     }
 }

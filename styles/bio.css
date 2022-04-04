@@ -629,21 +629,25 @@
     padding-bottom: 2%;
   }
 }
-.conversation__formsSection {
+
+.formsSection {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   text-transform: uppercase;
 }
-.conversation__formsSection--header {
+.formsSection__forms {
+  flex-direction: column;
+}
+.formsSection--header {
   text-transform: uppercase;
   color: #E1E1E1;
 }
-.conversation__formsSection--commentField {
+.formsSection--commentField {
   min-height: 90px;
   overflow: scroll;
   display: flex;
 }
-.conversation__formsSection--button {
+.formsSection--button {
   font-family: "AvenirNext";
   font-weight: 700;
   background-color: #323232;
@@ -655,25 +659,45 @@
   border-radius: 15px;
   margin: 16px 0;
 }
-.conversation__commentSection {
-  list-style: none;
-}
-.conversation__displayPicDiv {
+.formsSection__displayPicDiv {
   display: flex;
   flex-direction: column;
 }
-.conversation__displayPicDiv--displayPic {
-  border-radius: 50%;
+.formsSection__displayPicDiv--displayPic {
+  border-radius: 50px;
   max-height: 36px;
   max-width: 36px;
 }
 @media only screen and (min-width: 768px) {
-  .conversation__displayPicDiv--displayPic {
+  .formsSection__displayPicDiv--displayPic {
     max-height: 48px;
     max-width: 48px;
   }
 }
 
+.postedCommentSection {
+  display: flex;
+  flex-direction: row;
+  border-bottom: 1px solid #E1E1E1;
+  position: relative;
+  padding: 16px 0;
+}
+.postedCommentSection__imageNodeSpan {
+  background-color: grey;
+  width: 20%;
+}
+.postedCommentSection__mainNode {
+  display: flex;
+  flex-direction: column;
+}
+.postedCommentSection__mainNode--nameNode {
+  font-weight: 600;
+}
+.postedCommentSection__mainNode--dateNode {
+  color: #AFAFAF;
+  position: absolute;
+  right: 0;
+}
 input:active {
   border-color: #323232;
 }
