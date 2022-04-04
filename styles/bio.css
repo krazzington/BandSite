@@ -641,6 +641,7 @@
 .conversation__formsSection--commentField {
   min-height: 90px;
   overflow: scroll;
+  display: flex;
 }
 .conversation__formsSection--button {
   font-family: "AvenirNext";
@@ -671,6 +672,18 @@
     max-height: 48px;
     max-width: 48px;
   }
+}
+
+input:active {
+  border-color: #323232;
+}
+
+input:active {
+  border-color: #323232;
+}
+
+input:required {
+  border-color: red;
 }
 
 * {

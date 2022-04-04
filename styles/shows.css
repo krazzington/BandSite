@@ -643,6 +643,12 @@
     padding-bottom: 0;
   }
 }
+.shows__showDiv--activeRow {
+  background-color: #E1E1E1;
+}
+.shows__showDiv:hover {
+  background-color: #FAFAFA;
+}
 .shows__divHeaders {
   color: #E1E1E1;
   text-transform: uppercase;
@@ -650,12 +656,12 @@
 }
 @media only screen and (min-width: 768px) {
   .shows__divHeaders {
-    display: none;
+    visibility: hidden;
   }
 }
 @media only screen and (min-width: 768px) {
   .shows__divHeaders:first-child {
-    display: none;
+    visibility: visible;
   }
 }
 @media only screen and (min-width: 768px) {

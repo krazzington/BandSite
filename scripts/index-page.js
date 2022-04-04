@@ -31,16 +31,19 @@ const formsSection = document.getElementById( 'formsSection' );
 
 const printComments = [
     {
+        pic: '',//This is part of the test
         name: 'Connor Walton',
         date: '02/17/2021',
         comment: 'his is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains.'
     },
     {
+        pic: '',//This is part of the test
         name: 'Emilie Beach',
         date: '01/09/2021',
         comment: 'I feel blessed to have seen them in person. What a show! They were just perfection. If there was one day of my life I could relive, this would be it. What an incredible day.'
     },
     {
+        pic: '',//This is part of the test
         name: 'Miles Acosta',
         date: '12/20/2020',
         comment: 'I can t stop listening. Every time I hear one of their songs the vocals it gives me goosebumps. Shivers straight down my spine. What a beautiful expression of creativity. Can t get enough. I sure hope 2021 is an improvement on 2020.'
@@ -48,16 +51,21 @@ const printComments = [
 ];
 
 const displayComment = ( commentObject ) => {
-    let listItem = document.createElement( 'li' );
-        
+    let listItem = document.createElement( 'div' );
+    
+    let imageNode = document.createElement( 'span' ); //This is a test    -------   must be img tag
+    imageNode.classList.add( "commentDisplayPic" ); //This is part of the test
     let nameNode = document.createElement( 'span' );
     let dateNode = document.createElement( 'span' );
     let commentNode = document.createElement( 'span' );
+    
 
+    imageNode.innerText = commentObject.pic; //This is part of the test 
     nameNode.innerText = commentObject.name;
     dateNode.innerText = commentObject.date;
     commentNode.innerText = commentObject.comment;
 
+    listItem.appendChild( imageNode ); //This is part of the test
     listItem.appendChild( nameNode );
     listItem.appendChild( dateNode );
     listItem.appendChild( commentNode );
@@ -70,7 +78,14 @@ let commentRender = ( comments ) => {
 
     //Comment list
     let unorderedList = document.querySelector( '#comments-list' ); 
-
+    // let divs = unorderedList.getElementsByTagName("div");
+    //     if(divs != null)
+    //     {
+    //         for(let v = divs.length - 1; v >= 0; v--)
+    //         {
+    //             parent.removeChild(divs[0]);
+    //         }
+    //     }​
     for (let i = 0; i < comments.length; i++) {
         
         let commentObject = comments[i];
@@ -81,9 +96,13 @@ let commentRender = ( comments ) => {
 const addComment = ( event ) => {
     event.preventDefault();
 
+    let picForm = document.getElementById( 'pic-input' ); //This is part of the test
     let nameForm = document.getElementById( 'name-input' );
     let commentForm = document.getElementById( 'comment-input' );
     let todaysDate = new Date();
+
+    let pic = picForm.value; //This is part of the test
+    picForm.value = '';
 
     let name = nameForm.value;
     nameForm.value = '';
@@ -92,10 +111,13 @@ const addComment = ( event ) => {
     commentForm.value = '';
 
     const commentObject = {
+        pic: pic,
         name: name,
         date: todaysDate,
         comment: comment,
     }
+
+    commentObject.classList.add()
 
     printComments.unshift( commentObject );
     commentRender ( printComments );

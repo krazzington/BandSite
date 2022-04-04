@@ -81,17 +81,17 @@
             <h1 class="conversation__header">Join the Conversation</h1>
             <form id="formsSection">
                 <div class="conversation__displayPicDiv">
-                    <img class="conversation__displayPicDiv--displayPic" src="./assets/images/Mohan-muruge.jpg"/>
+                    <img class="conversation__displayPicDiv--displayPic" id="pic-input" src="./assets/images/Mohan-muruge.jpg"/>
                 </div>
                 <div class="conversation__formsSection--header">name</div>
-                <input type="text" name="nameSection" placeholder="Enter your name" class="conversation__formsSection--nameField" id="name-input"/>
+                <input type="text" name="nameSection" placeholder="Enter your name" class="conversation__formsSection--nameField" id="name-input" required/>
                 <div class="conversation__formsSection--header">comment</div>
-                <input type="text" name="nameSection" placeholder="Enter your name" class="conversation__formsSection--commentField" id="comment-input"/>
-                <div class="conversation__formsSection--button" type="submit">comment</div>
+                <input type="text" name="nameSection" placeholder="Enter your name" class="conversation__formsSection--commentField" id="comment-input" required/>
+                <button class="conversation__formsSection--button" type="submit">comment</button> 
             </form>
 
             <div class="conversation__commentSection" id="comments-list">
-
+                
             </div>
     </section>
     <footer class="footer">

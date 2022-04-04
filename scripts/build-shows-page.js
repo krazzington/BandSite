@@ -97,9 +97,24 @@ const showIntoTheRow = ( gigArray ) => {
 //Invoking my renderer
 showIntoTheRow( gigDetails );
 
-//querySelector(row);
-//addEventListener(click ,function)
-//onclick, add class
-//if()
+// querySelector(row);
+// addEventListener(click ,function)
+// onclick, add class
+// if()
 
-//the function needs to add a class
+// the function needs to add a class
+
+//Active Class
+
+const activeClass = document.querySelectorAll( ".shows__showDiv" );
+
+const rowActivated = (show) => {
+    show.classList.add( "shows__showDiv--activeRow")
+};
+
+
+for(let i = 0; i < activeClass.length; i++){
+    activeClass[i].addEventListener( 'click', function() { rowActivated(activeClass[i])})
+
+}
+console.log(activeClass);

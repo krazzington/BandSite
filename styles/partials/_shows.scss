@@ -41,7 +41,16 @@
             align-items: baseline;
             padding-bottom: 0;
         }
+
+        &--activeRow {
+            background-color: $mercuryClr;
+        }
     }
+
+    &__showDiv:hover {
+        background-color: $offWhiteClr;
+    }
+
 
     &__divHeaders {
         color: $mercuryClr;
@@ -49,7 +58,7 @@
         padding: 16px 0;
 
         @include tablet {
-            display: none;
+            visibility: hidden;
         
         }
     }
@@ -57,7 +66,7 @@
     &__divHeaders:first-child {
         
         @include tablet {
-            display: none;
+            visibility: visible;
         }
     }
 
