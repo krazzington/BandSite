@@ -16,19 +16,16 @@ const formsSection = document.getElementById( 'formsSection' );
 
 const printComments = [
     {
-        pic: '',//This is part of the test
         name: 'Connor Walton',
         date: '02/17/2021',
         comment: 'This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains.'
     },
     {
-        pic: '',//This is part of the test
         name: 'Emilie Beach',
         date: '01/09/2021',
         comment: 'I feel blessed to have seen them in person. What a show! They were just perfection. If there was one day of my life I could relive, this would be it. What an incredible day.'
     },
     {
-        pic: '',//This is part of the test
         name: 'Miles Acosta',
         date: '12/20/2020',
         comment: 'I can t stop listening. Every time I hear one of their songs the vocals it gives me goosebumps. Shivers straight down my spine. What a beautiful expression of creativity. Can t get enough. I sure hope 2021 is an improvement on 2020.'
@@ -39,24 +36,32 @@ const displayComment = ( commentObject ) => {
     let listItem = document.createElement( 'div' );
     listItem.classList.add( 'postedCommentSection' );
     
-    let imageNode = document.createElement( 'span' ); //This is a test    -------   must be img tag
-    imageNode.classList.add( 'postedCommentSection__imageNodeSpan' )
-    let nameNode = document.createElement( 'div' );
-    nameNode.classList.add( 'postedCommentSection__mainNode--nameNode' )
-    let dateNode = document.createElement( 'div' );
-    dateNode.classList.add( 'postedCommentSection__mainNode--dateNode' )
-    let commentNode = document.createElement( 'div' );
-    commentNode.classList.add( 'postedCommentSection__mainNode--commentNode' )
+    let imageDiv = document.createElement( 'div' );
+    imageDiv.classList.add( 'postedCommentSection__imageDiv' );
+    let mainDiv = document.createElement( 'div' );
+    mainDiv.classList.add( 'postedCommentSection__mainDiv' );
 
-    imageNode.innerText = commentObject.pic; //This is part of the test 
+    let imageNode = document.createElement( 'div' );
+    imageNode.classList.add( 'postedCommentSection__imageDiv--imageNode' )
+    let nameNode = document.createElement( 'div' );
+    nameNode.classList.add( 'postedCommentSection__mainDiv--nameNode' )
+    let dateNode = document.createElement( 'div' );
+    dateNode.classList.add( 'postedCommentSection__mainDiv--dateNode' )
+    let commentNode = document.createElement( 'div' );
+    commentNode.classList.add( 'postedCommentSection__mainDiv--commentNode' )
+
     nameNode.innerText = commentObject.name;
     dateNode.innerText = commentObject.date;
     commentNode.innerText = commentObject.comment;
 
-    listItem.appendChild( imageNode ); //This is part of the test
-    listItem.appendChild( nameNode );
-    listItem.appendChild( dateNode );
-    listItem.appendChild( commentNode );
+    imageDiv.appendChild( imageNode );
+
+    mainDiv.appendChild( nameNode );
+    mainDiv.appendChild( dateNode );
+    mainDiv.appendChild( commentNode );
+
+    listItem.appendChild( mainDiv );
+    listItem.appendChild( imageDiv );
 
     return listItem;
 }
@@ -84,13 +89,10 @@ let commentRender = ( comments ) => {
 const addComment = ( event ) => {
     event.preventDefault();
 
-    let picForm = document.getElementById( 'pic-input' ); //This is part of the test
+    let unorderedList = document.querySelector( '#comments-list' );
     let nameForm = document.getElementById( 'name-input' );
     let commentForm = document.getElementById( 'comment-input' );
     let todaysDate = new Date();
-
-    let pic = picForm.value; //This is part of the test
-    picForm.value = '';
 
     let name = nameForm.value;
     nameForm.value = '';
@@ -99,15 +101,15 @@ const addComment = ( event ) => {
     commentForm.value = '';
 
     const commentObject = {
-        pic: pic,
         name: name,
         date: todaysDate,
         comment: comment,
     }
 
-    commentObject.classList.add();
+    //commentObject.classList.add();
 
     printComments.unshift( commentObject );
+    unorderedList.innerHTML = ''; 
     commentRender ( printComments );
     
 }

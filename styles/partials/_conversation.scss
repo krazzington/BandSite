@@ -73,29 +73,33 @@
 
 .postedCommentSection {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     border-bottom: 1px solid $mercuryClr;
-    position: relative;
     padding: 16px 0;
 
-    &__imageNodeSpan {
+    &__imageDiv {
         background-color: grey;
-        width: 20%;
+        width: 100px;
+
+        &--imageNode {
+
+        }
     }
 
-    &__mainNode{
-        display: flex;
+    &__mainDiv{
         flex-direction: column;
+        position: relative;
 
         &--nameNode{
             font-weight: 600;
-            
         }
+
         &--dateNode{
             color: $silverClr;
             position: absolute;
             right:0;
         }
+
         &--commentNode{
             
         }
