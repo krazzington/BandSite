@@ -56,20 +56,31 @@
         
         &__overlay {
             @extend .hero__overlay;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            
-            &--band-name {
-                @extend .hero__band-name;
-    
-            }
-            
-            &--iframe {
-                width: 50%;
-            }
         }
-        
-        
+}
+
+.overlay {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    &__overlayTextDiv{
     
+        &--track-name {
+            @extend .hero__band-name;
+        }
+
+        &--band-name {
+            @extend .hero__band-name;
+        }
+    }
+
+    &__overlayFrameDiv {
+        display: flex;
+        
+        &--iframe {
+            justify-content: center;
+            align-content: center;
+        }
+    }
 }

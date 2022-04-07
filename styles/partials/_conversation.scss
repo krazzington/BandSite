@@ -76,13 +76,15 @@
     flex-direction: column;
     border-bottom: 1px solid $mercuryClr;
     padding: 16px 0;
+    background-color: blue;
 
     &__imageDiv {
         background-color: grey;
         width: 100px;
 
         &--imageNode {
-
+            width: 60px;
+            height: 60px;
         }
     }
 

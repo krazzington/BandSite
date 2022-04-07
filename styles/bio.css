@@ -179,7 +179,7 @@
   bottom: 0;
   left: 0;
 }
-.hero__band-name, .show-hero__overlay--band-name {
+.hero__band-name, .overlay__overlayTextDiv--band-name, .overlay__overlayTextDiv--track-name {
   font-family: "AvenirNext";
   font-weight: 600;
   font-size: 175%;
@@ -189,13 +189,13 @@
   top: 37.5%;
 }
 @media only screen and (min-width: 768px) {
-  .hero__band-name, .show-hero__overlay--band-name {
+  .hero__band-name, .overlay__overlayTextDiv--band-name, .overlay__overlayTextDiv--track-name {
     font-size: 500%;
     padding-left: 4.5%;
   }
 }
 @media only screen and (min-width: 1280px) {
-  .hero__band-name, .show-hero__overlay--band-name {
+  .hero__band-name, .overlay__overlayTextDiv--band-name, .overlay__overlayTextDiv--track-name {
     padding-left: 0;
     padding: 2% 10%;
     font-size: 7vh;
@@ -206,13 +206,17 @@
   background-image: url("../assets/images/hero-shows.jpg");
   background-position: top;
 }
-.show-hero__overlay {
+.overlay {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-.show-hero__overlay--iframe {
-  width: 50%;
+.overlay__overlayFrameDiv {
+  display: flex;
+}
+.overlay__overlayFrameDiv--iframe {
+  justify-content: center;
+  align-content: center;
 }
 
 .main {
@@ -677,23 +681,27 @@
 
 .postedCommentSection {
   display: flex;
-  flex-direction: row;
-  border-bottom: 1px solid #E1E1E1;
-  position: relative;
-  padding: 16px 0;
-}
-.postedCommentSection__imageNodeSpan {
-  background-color: grey;
-  width: 20%;
-}
-.postedCommentSection__mainNode {
-  display: flex;
   flex-direction: column;
+  border-bottom: 1px solid #E1E1E1;
+  padding: 16px 0;
+  background-color: blue;
 }
-.postedCommentSection__mainNode--nameNode {
+.postedCommentSection__imageDiv {
+  background-color: grey;
+  width: 100px;
+}
+.postedCommentSection__imageDiv--imageNode {
+  width: 60px;
+  height: 60px;
+}
+.postedCommentSection__mainDiv {
+  flex-direction: column;
+  position: relative;
+}
+.postedCommentSection__mainDiv--nameNode {
   font-weight: 600;
 }
-.postedCommentSection__mainNode--dateNode {
+.postedCommentSection__mainDiv--dateNode {
   color: #AFAFAF;
   position: absolute;
   right: 0;
