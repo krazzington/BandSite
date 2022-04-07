@@ -53,6 +53,13 @@
     @extend .hero;
         background-image: url("../assets/images/hero-shows.jpg");
         background-position: top;
+
+        @include tablet {
+            height: 80vh;
+        }
+        @include desktop {
+            height: 80vh;
+        }
         
         &__overlay {
             @extend .hero__overlay;
@@ -67,20 +74,21 @@
     &__overlayTextDiv{
     
         &--track-name {
-            @extend .hero__band-name;
+            @include section-padding-mobile;
         }
 
         &--band-name {
-            @extend .hero__band-name;
+            @include section-padding-mobile;
         }
     }
 
     &__overlayFrameDiv {
         display: flex;
+        justify-content: center;
+        align-content: center;
         
         &--iframe {
-            justify-content: center;
-            align-content: center;
+            width: 96%;
         }
     }
 }

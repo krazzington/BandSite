@@ -179,7 +179,7 @@
   bottom: 0;
   left: 0;
 }
-.hero__band-name, .overlay__overlayTextDiv--band-name, .overlay__overlayTextDiv--track-name {
+.hero__band-name {
   font-family: "AvenirNext";
   font-weight: 600;
   font-size: 175%;
@@ -189,13 +189,13 @@
   top: 37.5%;
 }
 @media only screen and (min-width: 768px) {
-  .hero__band-name, .overlay__overlayTextDiv--band-name, .overlay__overlayTextDiv--track-name {
+  .hero__band-name {
     font-size: 500%;
     padding-left: 4.5%;
   }
 }
 @media only screen and (min-width: 1280px) {
-  .hero__band-name, .overlay__overlayTextDiv--band-name, .overlay__overlayTextDiv--track-name {
+  .hero__band-name {
     padding-left: 0;
     padding: 2% 10%;
     font-size: 7vh;
@@ -206,17 +206,34 @@
   background-image: url("../assets/images/hero-shows.jpg");
   background-position: top;
 }
+@media only screen and (min-width: 768px) {
+  .show-hero {
+    height: 80vh;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .show-hero {
+    height: 80vh;
+  }
+}
 .overlay {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
+.overlay__overlayTextDiv--track-name {
+  padding: 4.5%;
+}
+.overlay__overlayTextDiv--band-name {
+  padding: 4.5%;
+}
 .overlay__overlayFrameDiv {
   display: flex;
-}
-.overlay__overlayFrameDiv--iframe {
   justify-content: center;
   align-content: center;
+}
+.overlay__overlayFrameDiv--iframe {
+  width: 96%;
 }
 
 .main {

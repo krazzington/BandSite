@@ -117,4 +117,4 @@ for(let i = 0; i < activeClass.length; i++){
     activeClass[i].addEventListener( 'click', function() { rowActivated(activeClass[i])})
 
 }
-console.log(activeClass);
+// console.log(activeClass);
