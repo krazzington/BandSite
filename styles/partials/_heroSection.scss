@@ -4,9 +4,9 @@
 
 //hero section
 .hero {
-    height: 30vh;
-    min-height: 30vh;
     background-image: url("../assets/images/hero-bio.jpg");
+    height: 40vh;
+    min-height: 40vh;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: bottom;
@@ -53,6 +53,8 @@
     @extend .hero;
         background-image: url("../assets/images/hero-shows.jpg");
         background-position: top;
+        height: 60vh;
+        min-height: 60vh;
 
         @include tablet {
             height: 80vh;
@@ -67,18 +69,39 @@
 }
 
 .overlay {
-    display: flex;
-    flex-direction: column;
+    @include flex-column;
     justify-content: center;
 
+        @include desktop {
+            @include flex-row;
+            @include section-padding-desktop;
+            align-items: center;
+        }
+
     &__overlayTextDiv{
-    
+        flex: 1;
+        
         &--track-name {
             @include section-padding-mobile;
+            font-size: 200%;
+            padding-bottom: 0;
         }
 
         &--band-name {
             @include section-padding-mobile;
+            @include section-header;
+            font-size: 300%;
+
+            @include tablet {
+                font-size: 500%;
+                padding-left: 4.5%;
+            }
+
+            @include desktop {
+                padding-left: 0;
+                @include section-padding-desktop;
+                font-size: 600%;
+            }
         }
     }
 
@@ -86,9 +109,14 @@
         display: flex;
         justify-content: center;
         align-content: center;
-        
+        flex: 1;
+
         &--iframe {
-            width: 96%;
+            width: 90%;
+
+            @include tablet {
+
+            }
         }
     }
 }

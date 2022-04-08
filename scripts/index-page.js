@@ -11,6 +11,10 @@
 // Re-renders to the page all comments from the comment array
 // Clears the input fields after submitting a new comment
 
+const usersURL = 'https://reqres.in/api/users?page=1'
+axios.get(usersURL).then(response => {
+  console.log(response.data);
+});
 
 const formsSection = document.getElementById( 'formsSection' );
 
@@ -111,7 +115,6 @@ const addComment = ( event ) => {
     printComments.unshift( commentObject );
     unorderedList.innerHTML = ''; 
     commentRender ( printComments );
-    
 }
 
 commentRender( printComments );
