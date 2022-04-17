@@ -80,7 +80,7 @@
     </section>
     <section class="conversation">
             <h1 class="conversation__header">Join the Conversation</h1>
-            <form class="formsSection" id="formsSection">
+            <form class="formsSection" id="formsSection" method="POST">
                 <div class="formsSection__displayPicDiv">
                     <img class="formsSection__displayPicDiv--displayPic" id="pic-input" src="./assets/images/Mohan-muruge.jpg"/>
                 </div>
@@ -88,8 +88,8 @@
                     <div class="formsSection__forms--header">name</div>
                     <input type="text" name="nameSection" placeholder="Enter your name" class="formsSection__forms--nameField" id="name-input" required/>
                     <div class="formsSection__forms--header">comment</div>
-                    <input type="text" name="nameSection" placeholder="Enter your name" class="formsSection__forms--commentField" id="comment-input" required/>
-                    <div class="formsSection__forms--button" type="submit">comment</div> 
+                    <input type="text" name="commentSection" placeholder="Enter your comment" class="formsSection__forms--commentField" id="comment-input" required/>
+                    <button class="formsSection__forms--button" type="submit">comment</button> 
                 </div>
             </form>
 

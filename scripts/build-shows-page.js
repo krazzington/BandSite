@@ -9,16 +9,13 @@
 const ticketbutton = document.createElement( 'div' );
 ticketbutton.classList.add('shows__showRow--ticketbutton')
 
-const gigDetails = [
-    { Date : 'Mon Sept 06 2021', Venue : 'Ronald Lane', Location : 'San Francisco, CA', TicketText : ticketbutton },
-    { Date : 'Tue Sept 21 2021', Venue : 'Pier 3 East', Location : 'San Francisco, CA', TicketText : ticketbutton },
-    { Date : 'Fri Oct 15 2021', Venue : 'View Lounge', Location : 'San Francisco, CA', TicketText : ticketbutton },
-    { Date : 'Sat Nov 06 2021', Venue : 'Hyatt Agency', Location : 'San Francisco, CA', TicketText : ticketbutton },
-    { Date : 'Fri Nov 26 2021', Venue : 'Moscow Center', Location : 'San Francisco, CA', TicketText : ticketbutton },
-    { Date : 'Wed Dec 15 2021', Venue : 'Press Club', Location : 'San Francisco, CA', TicketText : ticketbutton },
-];
+const gigDetailsAPI = 'https://project-1-api.herokuapp.com/showdates?api_key=b286c6ec-3de5-4598-9517-5a9617d60bd9';
 
-const showDivGenerator = ( showRows ) => {
+// let axiosGet = axios.get(gigDetailsAPI).then(response => {
+//     console.log(response.data);
+//   });
+
+  const showDivGenerator = ( showRows ) => {
     
 
     //Create the base element
@@ -29,7 +26,7 @@ const showDivGenerator = ( showRows ) => {
     const dateDiv = document.createElement( 'div' ); // date div in the show div --- this should own the header and date info
     dateDiv.classList.add( 'shows__dateDiv' ); // this adds the class to the date info
     const dateHeaderDiv = document.createElement( 'div' );
-    dateHeaderDiv.classList.add( 'shows__divHeaders' );
+    dateHeaderDiv.classList.add( 'shows__divHeaders', 'divHeaders' );
     dateHeaderDiv.innerText = 'date';
     const dateInfoDiv = document.createElement( 'div' );
     dateInfoDiv.innerText = showRows.Date;
@@ -88,16 +85,20 @@ const showIntoTheRow = ( gigArray ) => {
     //Target node
     const showDestination = document.querySelector( '#showTable' );
     
+    const axiosGet = axios.get(gigDetailsAPI).then((gig) => {
+
     gigArray.forEach( ( gig ) => {
         const createShowDiv = document.createElement( 'div' );
+        
         createShowDiv.appendChild( showDivGenerator( gig ) );
         showDestination.appendChild( createShowDiv );
-    } );
-
+        } );
+    }).catch(document.write("An error has occurred"));
 };
 
 //Invoking my renderer
-showIntoTheRow( gigDetails );
+
+showIntoTheRow( gigDetailsAPI );
 
 // querySelector(row);
 // addEventListener(click ,function)
@@ -120,3 +121,6 @@ for(let i = 0; i < activeClass.length; i++){
 
 }
 // console.log(activeClass);
+
+// let showsSectionLog = document.getElementById( 'showTable' );
+// console.log(showsSectionLog);

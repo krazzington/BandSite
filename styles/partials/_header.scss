@@ -60,9 +60,9 @@
         
         @include tablet{
             padding: 0;
-            align-items: center;
             height: 100%;
-            // justify-content: center;
+            align-items: center;
+            
         }
         @include desktop {
             margin-left: 32px;
@@ -76,8 +76,6 @@
             @include tablet{
                 margin-left: 32px;
                 padding: 0;
-                box-sizing: border-box;
-                align-self: center;
             }
             @include desktop {
                 margin: 0;
@@ -90,32 +88,39 @@
             @include tablet{
                 margin-left: 32px;
                 padding: 0;
-                box-sizing: border-box;
-                align-self: center;
+                
             }
             
         }
         &--nav-bio:hover{
             border-bottom: 5px solid $offWhiteClr;
             padding: 0 0 24px;
-            box-sizing: border-box;
             
             
             @include tablet{
                 font-weight: 600;
-                padding-bottom: 24px;
-                align-self: center;
+                padding: 1.1rem 0;
+                box-sizing: border-box;
+            }
+
+            @include desktop{
+                padding: 1.6rem 0;
+                box-sizing: border-box;
             }
         }
         &--nav-shows:hover{
             border-bottom: 5px solid $offWhiteClr;
             padding: 0 0 24px;
-            box-sizing: border-box;
+            
 
             @include tablet{
                 font-weight: 600;
-                padding-bottom: 24px;
-                align-self: center;
+                padding: 1.1rem 0;
+                box-sizing: border-box;
+            }
+            @include desktop{
+                padding: 1.6rem 0;
+                box-sizing: border-box;
             }
         }
 
@@ -123,21 +128,6 @@
             text-decoration: none;
             color: $whiteTextClr;
         }
-        // &--link:hover {
-        //     border-bottom: 3px solid $offWhiteClr;
-        //     padding: 0 34% 8%;
-        // }
-        // &--link:visited {
-        //     border-bottom: 3px solid $offWhiteClr;
-        //     padding: 0 35% 8%;
-        //     color: $silverClr;
-        // }
 
-        // &--nav-bio:active{
-        //     border-bottom: 3px solid $offWhiteClr;
-        // }
-        // &--nav-shows:active{
-        //     border-bottom: 3px solid $offWhiteClr;
-        // }
     }
 }

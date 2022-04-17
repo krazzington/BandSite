@@ -17,13 +17,9 @@
 
     &__container {
         
-            
-        
-        
-        
-        
         &--rights-reserved {
             -webkit-order: 4;
+            order: 4;
 
             @include tablet {
                 padding-top: 0;
@@ -38,12 +34,12 @@
         
         
     @include tablet {
-    display: -webkit-flex;
-    display: flex;
-    flex-flow: row wrap;
-    align-items: center;
-    width: 100%;
-    }
+        display: -webkit-flex;
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+        width: 100%;
+        }
 
     &__header{
 
@@ -53,7 +49,7 @@
         }
         &--h1 {
             @include section-header;
-        
+            
             @include tablet {
                 @include section-header-tablet;
                 padding-top: 0;
@@ -63,8 +59,8 @@
                 @include section-header-desktop;
             }
         }
-
     }
+
     &__social-icons {
         padding: 4% 0;
         
@@ -89,6 +85,7 @@
     }
     &__logo-container {
         -webkit-order: 3;
+        order: 3;
 
         @include bandsite-logo-mobile;
         
@@ -120,41 +117,42 @@
         }
     }
     
-    &__logo-container {
-        -webkit-order: 3;
+    // &__logo-container {
+    //     -webkit-order: 3;
 
-        @include bandsite-logo-mobile;
+    //     @include bandsite-logo-mobile;
         
-        @include tablet {
-            -webkit-order: 2;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: flex-end;
-            width: 32%;
-            flex: 2;
+    //     @include tablet {
+    //         -webkit-order: 2;
+    //         display: flex;
+    //         flex-wrap: wrap;
+    //         justify-content: flex-end;
+    //         width: 32%;
+    //         flex: 2;
             
-            @include footer-container-spacing-tablet;
-        }
-        @include desktop {
-            padding: 0;
+    //         @include footer-container-spacing-tablet;
+    //     }
+    //     @include desktop {
+    //         padding: 0;
 
-        }
+    //     }
         
-        &--anchor {
-        }
+    //     &--anchor {
+    //     }
         
-        &--img {
+    //     &--img {
             
             
-            @include tablet {
-                @include section-header-tablet;
+    //         @include tablet {
+    //             @include section-header-tablet;
                 
-            }
-        }
-    }
+    //         }
+    //     }
+    // }
     
     &--rights-reserved {
         -webkit-order: 4;
+        order: 4;
 
         @include tablet {
             padding-top: 0;
@@ -166,6 +164,7 @@
 .contact-div {
     padding-bottom: 10%;
     -webkit-order: 2;
+    order: 2;
 
 
     @include tablet {
@@ -179,6 +178,7 @@
     &__contact-info {
         line-height: 150%; 
         flex: 1;
+        min-width: 200px;
 
         @include tablet {
             @include footer-container-spacing-tablet;

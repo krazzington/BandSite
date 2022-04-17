@@ -63,12 +63,12 @@
         }
     }
 
-    &__divHeaders:first-child {
+    // &__divHeaders:first-child {
         
-        @include tablet {
-            visibility: visible;
-        }
-    }
+    //     @include tablet {
+    //         visibility: visible;
+    //     }
+    // }
 
     &__dateDiv{
 

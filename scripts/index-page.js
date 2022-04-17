@@ -10,84 +10,82 @@
 // Clears all comments from the page
 // Re-renders to the page all comments from the comment array
 // Clears the input fields after submitting a new comment
-
-const usersURL = 'https://reqres.in/api/users?page=1'
-axios.get(usersURL).then(response => {
-  console.log(response.data);
-});
-
 const formsSection = document.getElementById( 'formsSection' );
 
-const printComments = [
-    {
-        name: 'Connor Walton',
-        date: '02/17/2021',
-        comment: 'This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains.'
-    },
-    {
-        name: 'Emilie Beach',
-        date: '01/09/2021',
-        comment: 'I feel blessed to have seen them in person. What a show! They were just perfection. If there was one day of my life I could relive, this would be it. What an incredible day.'
-    },
-    {
-        name: 'Miles Acosta',
-        date: '12/20/2020',
-        comment: 'I can t stop listening. Every time I hear one of their songs the vocals it gives me goosebumps. Shivers straight down my spine. What a beautiful expression of creativity. Can t get enough. I sure hope 2021 is an improvement on 2020.'
-    }
-];
+const commentsAPI = 'https://project-1-api.herokuapp.com/comments?api_key=55b535b7-04a6-4cf7-bc79-32506c08e2cf';
 
+
+
+// let axiosGet = axios.get(commentsAPI).then(response => {
+//   console.log(response.data);
+// });
+
+//creates the div for the comments section - commentObject is a placeholder
 const displayComment = ( commentObject ) => {
+    //creates the div for the above function and gives it a class
     let listItem = document.createElement( 'div' );
     listItem.classList.add( 'postedCommentSection' );
     
+    //creates an image div section to place the image and gives it a class
     let imageDiv = document.createElement( 'div' );
     imageDiv.classList.add( 'postedCommentSection__imageDiv' );
+    //creates an comment div section to place the image and gives it a class
     let mainDiv = document.createElement( 'div' );
     mainDiv.classList.add( 'postedCommentSection__mainDiv' );
 
+    //creates image for the posted comments and gives it a class
     let imageNode = document.createElement( 'div' );
     imageNode.classList.add( 'postedCommentSection__imageDiv--imageNode' )
+    //creates name section for the posted comments and gives it a class
     let nameNode = document.createElement( 'div' );
     nameNode.classList.add( 'postedCommentSection__mainDiv--nameNode' )
+    //creates date section for the posted comments and gives it a class
     let dateNode = document.createElement( 'div' );
-    dateNode.classList.add( 'postedCommentSection__mainDiv--dateNode' )
+    dateNode.classList.add( 'postedCommentSection__dateNode' )
+    //creates comment section for the posted comments and gives it a class
     let commentNode = document.createElement( 'div' );
     commentNode.classList.add( 'postedCommentSection__mainDiv--commentNode' )
 
+    //plugs the text into the name node from the called function
     nameNode.innerText = commentObject.name;
-    dateNode.innerText = commentObject.date;
+    //plugs the text into the date nodes from the called function
+
+    dateNode.innerText = commentObject.timestamp;
+    //plugs the comment into the comment nodes from the called function
     commentNode.innerText = commentObject.comment;
 
+    //plugs the image for the posted comments into the imageDiv
     imageDiv.appendChild( imageNode );
 
+    //plugs the nodes into the main div with class .postedCommentSection__mainDiv
     mainDiv.appendChild( nameNode );
-    mainDiv.appendChild( dateNode );
     mainDiv.appendChild( commentNode );
 
+    //plugs imageDiv and mainDiv into the first div called in the function
     listItem.appendChild( mainDiv );
+    listItem.appendChild( dateNode );
     listItem.appendChild( imageDiv );
 
     return listItem;
+    
 }
 
-//Main renderer
+//Main renderer to send the comments to the page
 let commentRender = ( comments ) => {
 
-    //Comment list
+    //Comment list is on html page
     let unorderedList = document.querySelector( '#comments-list' ); 
-                                // let divs = unorderedList.getElementsByTagName("div");
-                                //     if(divs != null)
-                                //     {
-       //Left in for sprint 3   //         for(let v = divs.length - 1; v >= 0; v--)
-                                //         {
-                                //             parent.removeChild(divs[0]);
-                                //         }
-                                //     }​
-    for (let i = 0; i < comments.length; i++) {
+    //retreiving comments from axios as commentAPI
+    const axiosGet = axios.get(commentsAPI).then(response => {
+    
+    //loops through response.data retreived from commentAPI
+    for (let i = 0; i < response.data.length; i++) {
         
-        let commentObject = comments[i];
+        //commentObject refers to the first function (displayComment) and
+        let commentObject = response.data[i];
         unorderedList.appendChild( displayComment( commentObject ) );
-    }
+        }
+    });
 }
 
 const addComment = ( event ) => {
@@ -111,12 +109,16 @@ const addComment = ( event ) => {
     }
 
     //commentObject.classList.add();
-
-    printComments.unshift( commentObject );
+    const axiosPost = axios.post(commentsAPI).then(response => {
+    axiosPost.unshift( commentObject )
+    .catch((error) => console.log(error));//----------------------------------needs to post to API, then call the next two functions
+    });
+    //console.log(axiosPost);
     unorderedList.innerHTML = ''; 
-    commentRender ( printComments );
+    commentRender ( axiosPost );
+
 }
 
-commentRender( printComments );
+commentRender( commentsAPI );
 
 formsSection.addEventListener( 'submit', addComment );
