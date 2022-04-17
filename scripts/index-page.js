@@ -77,14 +77,23 @@ let commentRender = ( comments ) => {
     let unorderedList = document.querySelector( '#comments-list' ); 
     //retreiving comments from axios as commentAPI
     const axiosGet = axios.get(commentsAPI).then(response => {
-    
+    console.log(response);
+    const array = response.data;
+
+array.sort((a, b) => b.timestamp - a.timestamp)
+
+for (let i = 0; 1 < array.length; i++) {
+	let commentObject = array[i];
+	unorderedList.appendChild( displayComment ( commentObject ));
+}
+
     //loops through response.data retreived from commentAPI
-    for (let i = 0; i < response.data.length; i++) {
+    // for (let i = 0; i < response.data.length; i++) {
         
-        //commentObject refers to the first function (displayComment) and
-        let commentObject = response.data[i];
-        unorderedList.appendChild( displayComment( commentObject ) );
-        }
+    //     //commentObject refers to the first function (displayComment) and
+    //     let commentObject = response.data[i];
+    //     unorderedList.appendChild( displayComment( commentObject ) );
+    //     }
     });
 }
 
@@ -104,16 +113,23 @@ const addComment = ( event ) => {
 
     const commentObject = {
         name: name,
-        date: todaysDate,
+        //date: todaysDate,
         comment: comment,
     }
 
-    //commentObject.classList.add();
-    const axiosPost = axios.post(commentsAPI).then(response => {
-    axiosPost.unshift( commentObject )
-    .catch((error) => console.log(error));//----------------------------------needs to post to API, then call the next two functions
-    });
-    //console.log(axiosPost);
+    
+    axios.post(commentsAPI, commentObject )
+.then((res) => console.log('res', res))
+.catch((err) => console.log('error', err));
+
+
+    //commentObject.classList.add('postedCommentSection__mainDiv--commentNode');
+    // const axiosPost = axios.post(commentsAPI);
+    // axiosPost( commentObject ).then((response) => {
+    //     console.log(response);
+    // }).catch((error) => console.log(error));//----------------------------------needs to post to API, then call the next two functions
+    // ;
+    // console.log(axiosPost);
     unorderedList.innerHTML = ''; 
     commentRender ( axiosPost );
 

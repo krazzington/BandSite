@@ -16,6 +16,9 @@ const gigDetailsAPI = 'https://project-1-api.herokuapp.com/showdates?api_key=b28
 //   });
 
   const showDivGenerator = ( showRows ) => {
+    const dateInt = parseInt(showRows.date);
+    const d = new Date(dateInt);
+    const date = d.toLocaleString("en-US", {weekday: "short", month:"short", day: "numeric", year: "numeric"});
     
 
     //Create the base element
@@ -29,7 +32,7 @@ const gigDetailsAPI = 'https://project-1-api.herokuapp.com/showdates?api_key=b28
     dateHeaderDiv.classList.add( 'shows__divHeaders', 'divHeaders' );
     dateHeaderDiv.innerText = 'date';
     const dateInfoDiv = document.createElement( 'div' );
-    dateInfoDiv.innerText = showRows.Date;
+    dateInfoDiv.innerText = date;
     dateInfoDiv.classList.add( 'shows__dateDiv--dateInfo' );
     dateDiv.appendChild( dateHeaderDiv );
     dateDiv.appendChild( dateInfoDiv );
@@ -41,7 +44,7 @@ const gigDetailsAPI = 'https://project-1-api.herokuapp.com/showdates?api_key=b28
     venueHeaderDiv.classList.add( 'shows__divHeaders' );
     venueHeaderDiv.innerText = 'venue';
     const venueInfoDiv = document.createElement( 'div' );
-    venueInfoDiv.innerText = showRows.Venue;
+    venueInfoDiv.innerText = showRows.place;
     venueInfoDiv.classList.add( 'shows__venueDiv--venueInfo' );
     venueDiv.appendChild( venueHeaderDiv );
     venueDiv.appendChild( venueInfoDiv );
@@ -53,7 +56,7 @@ const gigDetailsAPI = 'https://project-1-api.herokuapp.com/showdates?api_key=b28
     locationHeaderDiv.classList.add( 'shows__divHeaders' );
     locationHeaderDiv.innerText = 'location';
     const locationInfoDiv = document.createElement( 'div' );
-    locationInfoDiv.innerText = showRows.Location;
+    locationInfoDiv.innerText = showRows.location;
     locationInfoDiv.classList.add( 'shows__locationDiv--locationInfo' );
     locationDiv.appendChild( locationHeaderDiv );
     locationDiv.appendChild( locationInfoDiv );
@@ -80,12 +83,13 @@ const gigDetailsAPI = 'https://project-1-api.herokuapp.com/showdates?api_key=b28
 };
 
 //Main renderer
-const showIntoTheRow = ( gigArray ) => {
-
+const showIntoTheRow = (  ) => {
+    
     //Target node
     const showDestination = document.querySelector( '#showTable' );
-    
-    const axiosGet = axios.get(gigDetailsAPI).then((gig) => {
+        
+    const axiosGet = axios.get(gigDetailsAPI).then(( response ) => {
+        const gigArray = response.data;
 
     gigArray.forEach( ( gig ) => {
         const createShowDiv = document.createElement( 'div' );
