@@ -8,7 +8,6 @@
     margin: 0;
     display: flex;
     flex-direction: column;
-    //Do not change above **************
     
         @include tablet {
             flex-direction: row;
@@ -26,7 +25,6 @@
     justify-content: center;
     width: 100%;
     @include bandsite-logo-mobile;
-    //Do not change above **************
         
         @include tablet{
             justify-content: flex-start;
@@ -56,7 +54,6 @@
         list-style: none;
         @include flex-row;
         height: 2rem;
-        //Do not change above **************
         
         @include tablet{
             padding: 0;

@@ -245,6 +245,12 @@
   font-size: 200%;
   padding-bottom: 0;
 }
+@media only screen and (min-width: 1280px) {
+  .overlay__overlayTextDiv--track-name {
+    padding-left: 0;
+    font-size: 200%;
+  }
+}
 .overlay__overlayTextDiv--band-name {
   padding: 4.5%;
   font-family: "AvenirNext";
@@ -262,8 +268,7 @@
 @media only screen and (min-width: 1280px) {
   .overlay__overlayTextDiv--band-name {
     padding-left: 0;
-    padding: 2% 10%;
-    font-size: 600%;
+    font-size: 400%;
   }
 }
 .overlay__overlayFrameDiv {
@@ -675,6 +680,9 @@
 @media only screen and (min-width: 1280px) {
   .shows {
     padding: 2% 10%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
   }
 }
 .shows__header {
@@ -704,14 +712,18 @@
   border-bottom: 1px solid #E1E1E1;
   display: flex;
   flex-direction: column;
-  padding-bottom: 2%;
 }
 @media only screen and (min-width: 768px) {
   .shows__showDiv {
     flex-direction: row;
     width: 100%;
     align-items: baseline;
-    padding-bottom: 0;
+    padding: 3%;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .shows__showDiv {
+    width: 100%;
   }
 }
 .shows__showDiv--activeRow {
@@ -736,7 +748,7 @@
   }
 }
 .shows__dateDiv--dateInfo {
-  font-style: bolder;
+  font-weight: 700;
 }
 @media only screen and (min-width: 768px) {
   .shows__venueDiv {
@@ -757,17 +769,19 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 15px;
-  margin: 16px 0;
+  border-radius: 4px;
+  min-height: 40px;
   width: 98%;
-  height: 40px;
-  max-width: 250px;
+  margin: 4.5%;
 }
 @media only screen and (min-width: 768px) {
   .shows__ticketButtonDiv {
     min-width: 150px;
     flex: 1;
   }
+}
+.shows__ticketButtonDiv:hover {
+  background-color: #000000;
 }
 
 * {

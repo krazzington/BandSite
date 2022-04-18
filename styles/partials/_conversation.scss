@@ -44,7 +44,6 @@
 
             @include tablet {
                 min-width: 60%;
-                
             }
         }
         
@@ -53,10 +52,7 @@
             border-radius: 4px;
             padding: 2%;
             border-color: $mercuryClr;
-            
-            @include tablet {
-                
-            }
+            box-sizing: border-box;
         }
 
         &--commentField{
@@ -67,23 +63,24 @@
             border-radius: 4px;
             border-color: $mercuryClr;
             padding: 2%;
+            box-sizing: border-box;
 
-            @include tablet {
-                
-                
-            }
         }
         
         &--button {
-            border-radius: 10px;
             border: none;
-            min-width: 40%;
+            min-width: 100%;
             @include button-mobile;
+            margin: 4.5% 0;
             
             @include tablet {
-                max-width: 60%;
+                min-width: 40%;
                 
             }
+        }
+
+        &--button:hover {
+            background-color: $darkBlackClr;
         }
     }
     &__displayPicDiv {
@@ -116,6 +113,7 @@
     &__imageDiv {
         background-color: white;
         width: 100px;
+        padding-right: 4.5%;
 
         &--imageNode {
             width: 60px;
@@ -133,22 +131,10 @@
 
     &__mainDiv{
         flex-direction: row;
-        
 
         &--nameNode{
             font-weight: 600;
             
-            @include tablet {
-            
-            }
-
-
-        }
-
-        &--commentNode{
-            @include tablet {
-            
-            }
         }
     }
 }

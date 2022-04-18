@@ -55,6 +55,7 @@
                 padding-top: 0;
                 width: 100%;
             }
+
             @include desktop {
                 @include section-header-desktop;
             }
@@ -101,54 +102,15 @@
         }
         @include desktop {
             padding: 0;
-
-        }
-        
-        &--anchor {
         }
         
         &--img {
             
-            
             @include tablet {
                 @include section-header-tablet;
-                
             }
         }
     }
-    
-    // &__logo-container {
-    //     -webkit-order: 3;
-
-    //     @include bandsite-logo-mobile;
-        
-    //     @include tablet {
-    //         -webkit-order: 2;
-    //         display: flex;
-    //         flex-wrap: wrap;
-    //         justify-content: flex-end;
-    //         width: 32%;
-    //         flex: 2;
-            
-    //         @include footer-container-spacing-tablet;
-    //     }
-    //     @include desktop {
-    //         padding: 0;
-
-    //     }
-        
-    //     &--anchor {
-    //     }
-        
-    //     &--img {
-            
-            
-    //         @include tablet {
-    //             @include section-header-tablet;
-                
-    //         }
-    //     }
-    // }
     
     &--rights-reserved {
         -webkit-order: 4;

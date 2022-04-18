@@ -245,6 +245,12 @@
   font-size: 200%;
   padding-bottom: 0;
 }
+@media only screen and (min-width: 1280px) {
+  .overlay__overlayTextDiv--track-name {
+    padding-left: 0;
+    font-size: 200%;
+  }
+}
 .overlay__overlayTextDiv--band-name {
   padding: 4.5%;
   font-family: "AvenirNext";
@@ -262,8 +268,7 @@
 @media only screen and (min-width: 1280px) {
   .overlay__overlayTextDiv--band-name {
     padding-left: 0;
-    padding: 2% 10%;
-    font-size: 600%;
+    font-size: 400%;
   }
 }
 .overlay__overlayFrameDiv {
@@ -724,6 +729,7 @@
   border-radius: 4px;
   padding: 2%;
   border-color: #E1E1E1;
+  box-sizing: border-box;
 }
 .formsSection__forms--commentField {
   min-height: 90px;
@@ -733,11 +739,11 @@
   border-radius: 4px;
   border-color: #E1E1E1;
   padding: 2%;
+  box-sizing: border-box;
 }
 .formsSection__forms--button {
-  border-radius: 10px;
   border: none;
-  min-width: 40%;
+  min-width: 100%;
   font-family: "AvenirNext";
   font-weight: 700;
   background-color: #323232;
@@ -746,13 +752,17 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 15px;
-  margin: 16px 0;
+  border-radius: 4px;
+  min-height: 40px;
+  margin: 4.5% 0;
 }
 @media only screen and (min-width: 768px) {
   .formsSection__forms--button {
-    max-width: 60%;
+    min-width: 40%;
   }
+}
+.formsSection__forms--button:hover {
+  background-color: #000000;
 }
 .formsSection__displayPicDiv {
   display: flex;
@@ -782,6 +792,7 @@
 .postedCommentSection__imageDiv {
   background-color: white;
   width: 100px;
+  padding-right: 4.5%;
 }
 .postedCommentSection__imageDiv--imageNode {
   width: 60px;
@@ -800,6 +811,7 @@
 .postedCommentSection__mainDiv--nameNode {
   font-weight: 600;
 }
+
 * {
   font-family: "AvenirNext LT Pro-Regular", serif;
   margin: 0;
